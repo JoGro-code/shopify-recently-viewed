@@ -24,3 +24,7 @@ Use an unpublished copy of Dawn. The example uses `localStorage`, the shop's Sho
 2. Load the asset in `layout/theme.liquid` before `</head>` using `<script src="{{ 'recently-viewed.js' | asset_url }}" defer></script>`.
 3. Use [the sample product template](Templates/product.json) as a reference. Add an entry of type `recently-viewed-products` to the `sections` object in your existing product JSON template and add that entry's key to the template's `order` array.
 4. Open published product pages in the unpublished theme preview and check that the section displays your recent products.
+
+In **Try the guest wishlist** above, choose EU 42 and EU 43 of the sample shoe and click **Save this size** for each. Select **Share the sample wishlist**, then **Open the recipient view** to check that both sizes appear.
+
+Wähle oben unter **Gast-Merkliste ausprobieren** EU 42 und EU 43 des Beispielschuhs und klicke jeweils auf **Diese Größe merken**. Klicke auf **Beispiel-Merkliste teilen** und dann auf **Empfängeransicht öffnen**, um beide Größen zu prüfen.
