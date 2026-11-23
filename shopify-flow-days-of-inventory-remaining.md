@@ -2,13 +2,13 @@
 
 Use a morning workflow to see which tracked variants are estimated to run out in the next 14 days. This example uses the past 30 completed days of Shopify inventory data and shows up to 20 rows in the Flow run log.
 
-**Draft awaiting a native Shopify test.** Build the three steps in an authorized development store. The export is pending the checks below.
+Shopify Flow accepted this query in the native preview on a development store. That store returned zero rows for the selected window. Build the workflow in your store and check your preview before scheduling it.
 
 ## Build the inventory check
 
 1. In Shopify Flow, create a workflow with **Scheduled time**. Choose a daily time in your store's time zone. Keep it inactive while you configure it.
-2. Add **Get analytics data** and paste the query below. Save the workflow to validate the query against your store.
-3. Add **Log output** and paste the snippet below. Check the **Get analytics data** and **Log output** steps under **Recent runs** after the scheduled test.
+2. Add **Get analytics data**. Choose **Add query**, open the editor, replace the editor contents with the query below, then choose **Run**. Shopify shows whether the query is valid and previews the result before you choose **Save**.
+3. Add **Log output** and paste the snippet below. Use Flow’s test mode to check both steps under **Recent runs** before enabling your regular schedule.
 
 The query runs in Shopify Flow. Its only output is the run log in your store.
 
@@ -57,10 +57,6 @@ If Flow rejects the query or the analytics step fails, check its error in **Rece
 
 Use the report to pick one important size to review. The RVI footwear sample shows a candidate for EU 42 and a separate size to review for restocking. The free CSV check processes Shopify exports in your browser. A real replacement needs the merchant's approval and its own current availability check in the target market. [Try the footwear sample](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en&example=footwear#audit-result-heading)
 
-## Checks before releasing a Flow export
+## Check the first result
 
-- In an authorized development store, verify that Shopify accepts the exact query and shows its expected columns. Document the store time zone and latest available snapshot.
-- Confirm a populated run with the exact variant ID, positive ending units and recent sales, and at most 14 estimated days. Use known comparison variants to verify that zero stock, no sales history and stock above the threshold are omitted.
-- If the development store lacks qualifying inventory analytics, record the populated case as pending. Check the actual inventory report before relying on test orders. Shopify excludes test orders from sales reports. [Shopify sales reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/sales-report)
-- Confirm a successful run with no matching rows. Use a deliberately invalid query in a test copy to verify that a native error stays distinct from an empty result. Keep all test workflows inactive afterward.
-- Export only the validated three-step workflow. Remove shop data, recipient values and store-specific identifiers. Import it as inactive in a second authorized development store and verify that the three steps and query survive the round trip. [Shopify Flow import and export](https://help.shopify.com/en/manual/shopify-flow/manage/manage)
+Compare one returned variant ID with Shopify’s inventory report for the same completed-day window. The row should have positive ending inventory and recent sales, with no more than 14 estimated days of stock. If your preview returns zero rows, check that Shopify reports sales and inventory for the window. Shopify excludes test orders from sales reports. [Shopify sales reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/sales-report)
