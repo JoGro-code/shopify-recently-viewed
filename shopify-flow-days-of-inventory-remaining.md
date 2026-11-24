@@ -87,6 +87,8 @@ When a size is unavailable in the buyer’s market, assess whether another locat
 
 In the worked example, five original sales at €32 contribute €122 after €18 freight and €20 in contribution given up at the sending location. Four replacement sales at €24 contribute €96. The transfer needs estimated sell-through of 83.75% after arrival to match the replacement. The values are fictional. Replace them with contributions after returns and include both locations when reviewing actual results.
 
+For a measured pilot, open **Plan a transfer pilot** after verifying the exact pair. Reserve separate original and substitute units for each group before sales. Check current Available units for each variant and location in Shopify’s inventory export. Save the plan and assignment files. After the last delivery and return window, use **Settle a completed transfer pilot**. Load the same plan, original assignments and finalized outcomes with the actual freight. The result includes the contribution from the original units kept at the sending location.
+
 The optional Sidekick step reviews the selected excerpts of your transfer rules. Review the preview, share it in Sidekick, and check the answer against the source quote. [Shopify fulfillment locations](https://help.shopify.com/en/manual/inventory-and-locations/setup/fulfillable-inventory) · [RVI Basic and Free Gallery](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-free-gallery)
 
 ### Original umlagern oder freigegebenen Ersatz verkaufen
@@ -94,6 +96,8 @@ The optional Sidekick step reviews the selected excerpts of your transfer rules.
 Öffne in RVI Basic **Umlagerung und Ersatz vergleichen** und wähle das freigegebene Paar. Bestätige, dass der empfangende Standort die Originalvariante in den gewählten Markt versenden kann. Gib die Reserve, die Zeit bis zum Versand und dieselbe Stückzahl für beide Optionen an. RVI prüft die Bestellbarkeit beider Varianten in Shopify.
 
 Im fiktiven Beispiel bleiben nach dem Verkauf von fünf Originalstücken zu je 32 € Deckungsbeitrag, 18 € Fracht und 20 € entgangenem Beitrag am abgebenden Standort **122 €**. Vier Verkäufe des Ersatzes zu je 24 € ergeben **96 €**. Ab 83,75 Prozent erwartetem Verkaufsanteil nach Ankunft erreicht die Umlagerung den geschätzten Beitrag des Ersatzes. Für die eigene Auswertung zählen die Beiträge beider Standorte nach Retouren. Die optionale Sidekick-Prüfung arbeitet mit ausgewählten Auszügen deiner Umlagerungsregeln. [RVI Basic und Gratisgalerie](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-gallery)
+
+Öffne nach der Prüfung **Umlagerungstest vorbereiten**, um je Gruppe getrennte Original- und Ersatzstücke vor Verkaufsstart festzulegen. Prüfe die aktuell verfügbaren Stücke für jede Variante und jeden Standort im Shopify-Bestandsexport. Speichere Testplan und Stückzuteilung. Nach der letzten Lieferung und der Retourenfrist lädst du die ursprünglichen Dateien und alle endgültigen Ergebnisse unter **Abgeschlossenen Umlagerungstest auswerten**. Die tatsächliche Fracht erfasst du einmal für die gesamte Umlagerung. RVI weist den Beitrag der zurückbehaltenen Originalstücke am abgebenden Standort gesondert aus.
 
 ## Check a new purchase order CSV
 
