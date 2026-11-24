@@ -6,6 +6,8 @@ This repository contains a Dawn theme example that remembers up to five recently
 
 After installation, add **Recently viewed products** to your product template and save it in Shopify’s theme editor. Open two products that use the same template in one browser. Allow storefront preferences if Shopify asks. The first product appears in the gallery on the second page.
 
+[Watch the 68-second Dawn setup](https://recently-viewed-products.fly.dev/watch-shopify-dawn-recently-viewed?locale=en) · [Anleitung auf Deutsch](https://recently-viewed-products.fly.dev/watch-shopify-dawn-recently-viewed?locale=de) · [Guide en français](https://recently-viewed-products.fly.dev/watch-shopify-dawn-recently-viewed?locale=fr)
+
 For a homepage gallery, add the block to the homepage and enable **RVI product history** in the same theme. Open any product and then the homepage to test it. [Get the Free Gallery on Shopify](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-free-gallery) · [Kostenlose Galerie im Shopify App Store](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-gallery)
 
 ### Help shoppers recover from a missing product page
