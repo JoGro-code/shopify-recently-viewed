@@ -22,6 +22,16 @@ In RVI Basic, open **Compare fit returns** in the AI stockout worklist. Use a Sh
 
 **Français.** Dans la liste de vérification IA de RVI Basic, ouvrez **Comparer les retours liés à la taille**. Utilisez l’export des produits Shopify avec les coûts unitaires et des CSV préparés de livraisons et de retours avec les identifiants exacts des variantes Shopify. Choisissez deux remplacements. Indiquez la langue de l’export si nécessaire et vérifiez les prix catalogue et la disponibilité à la commande dans le pays d’achat des ventes passées. Saisissez séparément la marge d’une unité retournée, puis vérifiez la paire exacte avant de l’approuver. Avec des retours et des coûts fictifs, les estimations peuvent être de 32,25 € et 24 € par unité livrée.
 
+### Compare foot lengths across shoe models
+
+In RVI Basic, enter both exact variant links under **Footwear size mappings**. Open **Compare recommended foot lengths** and paste the manufacturer’s range for each size in mm or cm. RVI shows whether the replacement covers all, part or none of the original range. If you choose **Ask Shopify Sidekick**, Shopify receives the excerpts shown in the preview. Check width, intended audience and fit before approving the pair.
+
+**Deutsch.** Gib in Basic unter **Größenzuordnungen für Ersatzschuhe** beide genauen Variantenlinks ein. Öffne **Empfohlene Fußlängen vergleichen** und füge für jede Größe den Herstellerbereich in mm oder cm ein. RVI zeigt, ob der Ersatz den ursprünglichen Bereich ganz, teilweise oder gar nicht abdeckt. Mit **Shopify Sidekick fragen** sendest du die Auszüge aus der Vorschau an Shopify. Prüfe Weite, Zielgruppe und Passform vor der Freigabe.
+
+**Français.** Dans Basic, saisissez les deux liens de variante exacts sous **Correspondances de pointures**. Ouvrez **Comparer les longueurs de pied recommandées** et collez les plages du fabricant en mm ou en cm. RVI indique si le remplacement couvre toute la plage d’origine, une partie ou aucune. Choisissez **Demander à Shopify Sidekick** pour transmettre à Shopify les extraits de l’aperçu. Vérifiez la largeur, le public visé et le chaussant avant d’approuver la paire.
+
+**EU 42.** Vaistoa recommends 260–265 mm for Hurmos 3 Winter and 257–263 mm for Uoma 4 Winter. The two guides overlap from 260 to 263 mm. [Hurmos 3 size guide](https://vaistoa.com/sv-se/products/hurmos-barefoot-casual-winter-boots?variant=59649033503045) · [Uoma 4 size guide](https://vaistoa.com/en-ca/collections/barefoot-trekking-hiking-shoes/products/uoma-winter-barefoot-trekking-boots)
+
 ## Free check for sold-out sizes
 
 [Check your Shopify product CSV](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en#audit-form-heading). If you stock at multiple locations, include your Shopify inventory export too. The files are processed in your browser.
