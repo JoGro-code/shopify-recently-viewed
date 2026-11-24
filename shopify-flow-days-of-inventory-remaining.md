@@ -69,6 +69,8 @@ Since October 1, 2026, Shopify's inventory reports use **On hand** stock, which 
 
 If a size is already unavailable and another confirmed variant has spare stock, compare offering that exact replacement with keeping those same units for normal sale. Use Shopify’s Available count from one location, protect your reserve and compare both paths after returns and costs. [Work through the surplus stock example](https://recently-viewed-products.fly.dev/shopify-reorder-decision?locale=en&ref=github-inventory#use-overstock)
 
+To measure it with RVI Basic, set aside two separately tracked lots of the same exact variant within the available stock above your reserve. Save the pilot plan and unit list before any sales. After the returns window, load the unit list and a separate outcome CSV. RVI shows realized contribution per assigned unit once all outcomes match.
+
 ### Verkaufstempo bei ausverkaufter Größe vergleichen
 
 Im fiktiven Beispiel meldet ShopifyQL für dieselbe Variante 56 Verkäufe und 28 Tage zwischen der ersten und letzten Bestandsaufnahme. Shopify berechnet **56 ÷ 28 = 2 Stück pro Tag**. War die Variante im selben Vertriebskanal und Markt nachweislich acht volle Tage bestellbar und wurden alle 56 vergleichbaren Einheiten an diesen Tagen verkauft, betrug das beobachtete Tempo **56 ÷ 8 = 7 Stück pro bestellbarem Tag**. Fehlt einer dieser Belege, zeige den Shopify-Wert und lass den zweiten Wert offen. Der Vergleich hilft bei der Nachbestellung. Entgangene Verkäufe brauchen einen eigenen Nachweis. [ShopifyQL-Bestandskennzahlen](https://shopify.dev/docs/api/shopifyql/latest/schemas/inventory/inventory#inventory_units_sold_per_day)
@@ -76,6 +78,8 @@ Im fiktiven Beispiel meldet ShopifyQL für dieselbe Variante 56 Verkäufe und 28
 Seit dem 1. Oktober 2026 verwenden Shopifys Bestandsberichte **Auf Lager**. Darin sind reservierte und nicht verfügbare Einheiten enthalten. Ältere Daten zeigen weiterhin **Verfügbar**. Die Spalte **Verfügbar** und der Anpassungsverlauf helfen bei der Prüfung am Lagerstandort. Prüfe für den Verkaufsmarkt zusätzlich den Katalog, den Versand vom jeweiligen Standort und den Weiterverkauf bei null Bestand. [Shopify-Inventarberichte](https://help.shopify.com/de/manual/reports-and-analytics/shopify-reports/report-types/default-reports/inventory-reports) · [Nachbestellung im RVI-Beispiel vergleichen](https://recently-viewed-products.fly.dev/shopify-reorder-decision?locale=de)
 
 Ist eine Größe bereits ausverkauft und ein passender Ersatz noch verfügbar, vergleiche den Einsatz derselben Stücke als Ersatz oder im regulären Verkauf. Verwende den verfügbaren Bestand eines Lagerorts, schütze deine Reserve und rechne beide Wege nach Retouren und Kosten. [Beispiel für Überbestand als Ersatz öffnen](https://recently-viewed-products.fly.dev/shopify-reorder-decision?locale=de&ref=github-inventory#use-overstock)
+
+Für die Auswertung in RVI Basic legst du zwei getrennt erfasste Gruppen derselben Variante oberhalb deiner Reserve an. Speichere Pilotplan und Stückliste vor dem Verkaufsstart. Nach der Retourenfrist lädst du die Stückliste und eine separate Ergebnis-CSV. RVI zeigt den erzielten Deckungsbeitrag je eingeplantem Stück, sobald alle Ergebnisse zugeordnet sind.
 
 ## Check a new purchase order CSV
 
