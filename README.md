@@ -10,6 +10,14 @@ After installation, add **Recently viewed products** to your product template an
 
 For a homepage gallery, add the block to the homepage and enable **RVI product history** in the same theme. Open any product and then the homepage to test it. [Get the Free Gallery on Shopify](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-free-gallery) · [Kostenlose Galerie im Shopify App Store](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-gallery)
 
+### Follow the setup with an assistant
+
+The optional [Dawn setup skill](skills/shopify-dawn-recently-viewed/SKILL.md) walks through the Free Gallery in a draft theme. Choose the Free plan in Shopify when you’re ready to install RVI.
+
+```sh
+npx skills add JoGro-code/shopify-recently-viewed --skill shopify-dawn-recently-viewed
+```
+
 ### Help shoppers recover from a missing product page
 
 [Try the free 404 gallery](https://recently-viewed-products.fly.dev/shopify-404-recently-viewed?locale=en&ref=github). Visit the sample product, then open the missing product link. The example returns HTTP 404 and links back to the item you just viewed. You can clear the example history and repeat it.
