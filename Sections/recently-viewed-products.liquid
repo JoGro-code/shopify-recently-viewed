@@ -104,7 +104,8 @@
           });
       });
 
-      Promise.all(requests).then(function(products) {
+      Promise.all(requests).then(function(responses) {
+        var products = responses.filter(product => product !== null);
         checkAndAddUnitPriceMeasurement(products);
         products.forEach(function(product) {
           
@@ -217,7 +218,7 @@
           }
         });
 
-        if (products.every(product => product === null)) {
+        if (products.length === 0) {
           container.innerHTML = '<p>Fehler beim Laden der kürzlich angesehenen Produkte.</p>';
         }
       }).catch(function(error) {
@@ -236,8 +237,8 @@
   "settings": [
     {
       "type": "header",
-      "content": "Galerie ohne Theme-Code",
-      "info": "Optional: [Kostenlose RVI-Galerie als Shopify-App installieren](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-editor)."
+      "content": "Galerie ohne Theme-Code / No-code gallery",
+      "info": "Optional: [Kostenlose RVI-Galerie als Shopify-App installieren](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-editor) · [Install the free RVI gallery on Shopify](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-editor)."
     },
     {
       "type": "inline_richtext",
