@@ -68,6 +68,8 @@ Die RVI-Produktverlaufsgalerie ist kostenlos. Basic ergänzt die Gast-Merkliste 
 
 Après l’essai, choisissez **Vérifier un produit de ma boutique**. Collez un lien produit, indiquez le pays de livraison et choisissez la pointure épuisée, puis un remplacement que Shopify confirme dans le catalogue de ce pays. Cliquez sur **Préparer la paire** et copiez son code.
 
+Si votre boutique utilise une fiche produit par couleur, [comparez directement les deux variantes](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=fr&ref=github&via=approved-demo#footwear-pair). Ouvrez **Vérifier deux variantes sur la même fiche ou sur des fiches séparées**, collez les deux liens contenant `?variant=` et choisissez le pays de livraison. Quand Shopify confirme que la variante d’origine est épuisée et que le remplacement est disponible, préparez le code de la paire.
+
 Depuis le résultat, ouvrez le Shopify App Store. Dans RVI Basic, sous **Correspondances de pointures**, collez le code et laissez RVI vérifier à nouveau les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier le thème. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
 
 ## Preview the Dawn theme example
