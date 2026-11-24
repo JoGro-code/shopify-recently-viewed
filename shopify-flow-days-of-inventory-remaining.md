@@ -80,3 +80,17 @@ Stocky stopped managing inventory on August 31, 2026. To reorder a variant from 
 ### Einkaufsbestellungs-CSV prüfen
 
 Seit dem 31. August 2026 läuft die Bestandsverwaltung in Shopify statt in Stocky. Wenn du eine Variante aus dem Flow-Bericht nachbestellen willst, prüfe ihre genaue SKU oder ihren Barcode und lege unter **Produkte → Bestellungen** einen Entwurf an. Verwende Shopifys CSV-Vorlage und einen aktuellen Export aller Produkte aus demselben Shop. Der kostenlose RVI-Check prüft eindeutige Treffer und markiert doppelte Zeilen vor dem Import. Beide Dateien bleiben im Browser. Historische Stocky-Bestellungen bewahrst du separat auf. [CSVs prüfen](https://recently-viewed-products.fly.dev/shopify-purchase-order-csv-check?locale=de&ref=github-purchase-order) · [Shopify-Vorlage und Import](https://help.shopify.com/de/manual/inventory-and-locations/purchase-orders/creating-purchase-orders#import-products-csv) · [Wechsel von Stocky](https://help.shopify.com/de/manual/inventory-and-locations/transitioning-from-stocky)
+
+## Check a supplier invoice after a split delivery
+
+Compare the agreed order line, units accepted across linked shipments and units already billed. Use the original PO currency. In this example, you ordered 30 units at €20 net, accepted 20 and were already billed for 10. A new invoice for 24 at €22.50 has **€25 in price differences** on the 10 matched units and **€90 for four units above the confirmed order**. A separate **€225 covers ten units still expected**. Check any approved order changes and review those ten units after receiving. [Shopify receiving and partial shipments](https://help.shopify.com/en/manual/inventory-and-locations/purchase-orders/creating-inventory-transfers) · [Shopify purchase order reports](https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/purchase-orders)
+
+**RVI Basic** compares two tab-separated tables in your browser and shows amounts for review before payment. Use one row per exact SKU, up to 100 data rows and 64 KiB per table.
+
+### Lieferantenrechnung nach einer Teillieferung prüfen
+
+Vergleiche die bestätigte Bestellposition, die angenommenen Mengen aller verknüpften Lieferungen und die bereits berechnete Menge. Verwende die ursprüngliche Bestellwährung. Im Beispiel wurden 30 Stück zu 20 EUR netto bestellt, 20 angenommen und 10 bereits berechnet. Bei 24 neu berechneten Stück zu 22,50 EUR ergeben sich **25 EUR Preisabweichung** auf zehn zugeordneten Stück und **90 EUR für vier Stück über der bestätigten Bestellmenge**. Weitere **225 EUR betreffen zehn noch erwartete Stück**. Prüfe genehmigte Bestelländerungen und gleiche die offenen Stück nach Wareneingang erneut ab.
+
+**RVI Basic** vergleicht zwei tabulatorgetrennte Tabellen im Browser und zeigt Beträge zur Prüfung vor der Zahlung. Verwende eine Zeile je exakter SKU, bis zu 100 Datenzeilen und 64 KiB pro Tabelle.
+
+[RVI on the Shopify App Store · RVI im Shopify App Store](https://apps.shopify.com/recently-viewed-products-7)
