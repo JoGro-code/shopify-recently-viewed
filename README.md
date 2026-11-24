@@ -2,6 +2,8 @@
 
 This repository contains a Dawn theme example that remembers up to five recently viewed products in the visitor's browser and displays them on a product page.
 
+[Pointure épuisée sur Shopify en français](#pointure-épuisée-sur-shopify)
+
 ## Free check for sold-out sizes
 
 [Check your Shopify product CSV](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en#audit-form-heading). If you stock at multiple locations, include your Shopify inventory export too. The files are processed in your browser.
@@ -37,6 +39,12 @@ Shopify Flow kann bei einer ausverkauften Variante die genauen Ersatzvarianten a
 Die RVI-Produktverlaufsgalerie ist kostenlos. Basic ergänzt die Gast-Merkliste für exakte Varianten, das Teilen per Link, WhatsApp oder E-Mail und passende Alternativen für ausverkaufte Größen. Gib ein Ersatzpaar frei und aktiviere die Prüfung für geteilte Merklisten. Empfänger können dann bei einer ausverkauften Variante prüfen, ob der freigegebene Ersatz in ihrem Markt bestellbar ist. Basic kostet 2,49 USD je 30 Tage und bietet sieben kostenlose Testtage. [Gast-Merkliste ausprobieren](https://recently-viewed-products.fly.dev/?locale=de&demo=wishlist#size-demo) · [RVI über Shopify installieren](https://apps.shopify.com/recently-viewed-products-7?locale=de&utm_source=github&utm_medium=referral&utm_campaign=rvi_relaunch_202611&utm_content=dawn_readme)
 
 Öffne im RVI-Admin über die **KI-Arbeitsliste** von Basic den Bereich **Größensuchen ohne Ergebnis**. Entferne personenbezogene Angaben und füge Suchbegriffe und Anzahlen aus dem Shopify-Bericht als `term,count` ein. RVI sortiert nach Häufigkeit und kann wörtliche Zitate aus der Antwort deines freigegebenen KI-Tools prüfen. Bestätige die Übereinstimmung. RVI verlinkt die genaue Originalvariante oder einen bereits freigegebenen Ersatz, wenn Shopify die Bestellbarkeit im gewählten Land bestätigt. Eine unterstützte Preisgrenze aus der Suche gleicht RVI mit dem Shopify-Katalogpreis ab. [Beide Preisgrenzen ausprobieren](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=de&ref=search-audit#search-audit).
+
+## Pointure épuisée sur Shopify
+
+[Essayer la démo en français](https://recently-viewed-products.fly.dev/shopify-approved-footwear-demo?locale=fr&ref=github). Dans le catalogue fictif, sélectionnez **EU 42** puis **Chercher une alternative validée** pour ouvrir la variante US 9 approuvée par la boutique. Recommencez avec **EU 43** pour voir le cas où aucune alternative n’a été validée.
+
+Après l’essai, choisissez **Voir RVI dans le Shopify App Store**. Dans votre boutique, ouvrez **Correspondances de pointures** dans RVI Basic et validez une paire exacte de variantes. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier le thème. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
 
 ## Preview the Dawn theme example
 
