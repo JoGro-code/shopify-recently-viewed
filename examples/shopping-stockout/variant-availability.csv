@@ -1,0 +1,4 @@
+offer_id,variant_id,from_day,through_day,availability
+ridge-42,9007199254740993,2026-11-10,2026-11-11,out_of_stock
+summit-42,9007199254740994,2026-11-10,2026-11-12,in_stock
+trail-43,9007199254740995,2026-11-10,2026-11-10,out_of_stock

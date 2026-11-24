@@ -93,6 +93,14 @@ In the RVI admin, open **Size searches with no results** from the Basic **AI sto
 
 [Check one search in your own shop](https://recently-viewed-products.fly.dev/shopify-search-rescue?locale=en&ref=search-audit).
 
+### Audit Google Shopping spend when a size sells out
+
+Match one Google Ads product report by item and day to full-day records of online orderability in your target country. For each matching offer, RVI Basic lists ad cost on documented stockout days. Any day with partial or missing coverage stays unclassified. The two files stay in the browser.
+
+[Try the public audit](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=en&ref=github-shopping-audit). In RVI Basic, go to **Stockout review → Audit Shopping spend**. To reproduce the example, download the [fictional Google Ads rows](examples/shopping-stockout/google-ads-item-days.csv?raw=1) and [fictional availability rows](examples/shopping-stockout/variant-availability.csv?raw=1), then select DE, EUR and Europe/Berlin. The first offer has €270.00 in ad costs on two documented stockout days. Another €75.00 for that offer stays unclassified.
+
+For your own audit, filter the report to one Google Ads account, Merchant Center feed and country. Match the exact item ID to its Shopify variant and check that the full day is supported by evidence in the Ads account time zone. Use the ranked CSV to review the original offers in Merchant Center. [Google Ads reporting](https://support.google.com/google-ads/answer/3455573) · [Shopify inventory history](https://help.shopify.com/en/manual/inventory-and-locations/adjusting-inventory/adjustment-history)
+
 ## Ausverkaufte Größen kostenlos prüfen
 
 [Eigene Shopify-Produkt-CSV prüfen](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=de#audit-form-heading). Ergänze bei mehreren Lagerstandorten den Shopify-Bestandsexport. Die Dateien werden im Browser verarbeitet.
@@ -111,6 +119,10 @@ Die RVI-Produktverlaufsgalerie ist kostenlos. Basic ergänzt die Gast-Merkliste 
 
 [Eine Suche im eigenen Shop prüfen](https://recently-viewed-products.fly.dev/shopify-search-rescue?locale=de&ref=search-audit).
 
+### Shopping-Werbekosten für ausverkaufte Größen prüfen
+
+RVI Basic gleicht einen Google-Ads-Tagesbericht mit Belegen zur Online-Bestellbarkeit derselben Variante im Zielland ab. Die Arbeitsliste sortiert nach gemeldeten Werbekosten an belegten Ausverkaufstagen. Unvollständig belegte Tage bleiben offen. [Fiktiven Bericht online prüfen](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=de&ref=github-shopping-audit)
+
 ## Pointure épuisée sur Shopify
 
 [Essayer la démo en français](https://recently-viewed-products.fly.dev/shopify-approved-footwear-demo?locale=fr&ref=github). Dans le catalogue fictif, sélectionnez **EU 42** puis **Chercher une alternative validée** pour ouvrir la variante US 9 approuvée par la boutique. Recommencez avec **EU 43** pour voir le cas où aucune alternative n’a été validée.
@@ -120,6 +132,10 @@ Après l’essai, choisissez **Vérifier un produit de ma boutique**. Collez un 
 Si votre boutique utilise une fiche produit par couleur, [comparez directement les deux variantes](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=fr&ref=github&via=approved-demo#footwear-pair). Ouvrez **Vérifier deux variantes sur la même fiche ou sur des fiches séparées**, collez les deux liens contenant `?variant=` et choisissez le pays de livraison. Quand Shopify confirme que la variante d’origine est épuisée et que le remplacement est disponible, préparez le code de la paire.
 
 Depuis le résultat, ouvrez le Shopify App Store. Dans RVI Basic, sous **Correspondances de pointures**, collez le code et laissez RVI vérifier à nouveau les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier le thème. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
+
+### Dépenses Shopping sur une pointure épuisée
+
+Dans RVI Basic, rapprochez un rapport Google Ads par article et par jour de vos justificatifs de disponibilité en ligne dans le pays ciblé. La liste classe les variantes par coût publicitaire les jours de rupture documentés. Les journées dont la disponibilité reste incertaine gardent leur propre catégorie. [Vérifier un rapport fictif](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=fr&ref=github-shopping-audit)
 
 ## Preview the Dawn theme example
 
