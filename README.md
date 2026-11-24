@@ -2,6 +2,10 @@
 
 This repository contains a Dawn theme example that remembers up to five recently viewed products in the visitor's browser and displays them on a product page.
 
+## Set up the Free Gallery
+
+Install RVI, enable **RVI product history** and add the **Recently viewed products** block in Shopify’s theme editor. [Get the Free Gallery on Shopify](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-free-gallery) · [Kostenlose Galerie im Shopify App Store](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-gallery)
+
 [Pointure épuisée sur Shopify en français](#pointure-épuisée-sur-shopify)
 
 ## Compare the sizes a shopper already viewed
