@@ -81,6 +81,20 @@ Ist eine Größe bereits ausverkauft und ein passender Ersatz noch verfügbar, v
 
 Für die Auswertung in RVI Basic legst du zwei getrennt erfasste Gruppen derselben Variante oberhalb deiner Reserve an. Speichere Pilotplan und Stückliste vor dem Verkaufsstart. Nach der Retourenfrist lädst du die Stückliste und eine separate Ergebnis-CSV. RVI zeigt den erzielten Deckungsbeitrag je eingeplantem Stück, sobald alle Ergebnisse zugeordnet sind.
 
+## Transfer the original or sell the approved replacement
+
+When a size is unavailable in the buyer’s market, assess whether another location can spare the original SKU. In RVI Basic, open **Compare transfer and replacement**, choose the approved pair, and verify the recipient can ship to that market. Enter the reserve at the sending location, the time until the original can ship, and the same planned quantity for both choices. RVI checks the current pair in Shopify before showing the estimate.
+
+In the worked example, five original sales at €32 contribute €122 after €18 freight and €20 in contribution given up at the sending location. Four replacement sales at €24 contribute €96. The transfer needs estimated sell-through of 83.75% after arrival to match the replacement. The values are fictional. Replace them with contributions after returns and include both locations when reviewing actual results.
+
+The optional Sidekick step reviews the selected excerpts of your transfer rules. Review the preview, share it in Sidekick, and check the answer against the source quote. [Shopify fulfillment locations](https://help.shopify.com/en/manual/inventory-and-locations/setup/fulfillable-inventory) · [RVI Basic and Free Gallery](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-free-gallery)
+
+### Original umlagern oder freigegebenen Ersatz verkaufen
+
+Öffne in RVI Basic **Umlagerung und Ersatz vergleichen** und wähle das freigegebene Paar. Bestätige, dass der empfangende Standort die Originalvariante in den gewählten Markt versenden kann. Gib die Reserve, die Zeit bis zum Versand und dieselbe Stückzahl für beide Optionen an. RVI prüft die Bestellbarkeit beider Varianten in Shopify.
+
+Im fiktiven Beispiel bleiben nach dem Verkauf von fünf Originalstücken zu je 32 € Deckungsbeitrag, 18 € Fracht und 20 € entgangenem Beitrag am abgebenden Standort **122 €**. Vier Verkäufe des Ersatzes zu je 24 € ergeben **96 €**. Ab 83,75 Prozent erwartetem Verkaufsanteil nach Ankunft erreicht die Umlagerung den geschätzten Beitrag des Ersatzes. Für die eigene Auswertung zählen die Beiträge beider Standorte nach Retouren. Die optionale Sidekick-Prüfung arbeitet mit ausgewählten Auszügen deiner Umlagerungsregeln. [RVI Basic und Gratisgalerie](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-gallery)
+
 ## Check a new purchase order CSV
 
 Stocky stopped managing inventory on August 31, 2026. To reorder a variant from the Flow report, confirm its exact SKU or barcode in the shop and start a draft under **Products → Purchase orders**. Use Shopify’s purchase order CSV template and a current all-products export from the same shop. The free RVI check looks for a unique variant match and flags duplicate lines before import. Both files stay in your browser. Keep historical Stocky purchase orders separately for your records. [Check the CSVs](https://recently-viewed-products.fly.dev/shopify-purchase-order-csv-check?locale=en&ref=github-purchase-order) · [Shopify CSV template and import](https://help.shopify.com/en/manual/inventory-and-locations/purchase-orders/creating-purchase-orders#import-products-csv) · [Stocky transition](https://help.shopify.com/en/manual/inventory-and-locations/transitioning-from-stocky)
