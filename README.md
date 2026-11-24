@@ -14,7 +14,7 @@ For a homepage gallery, add the block to the homepage and enable **RVI product h
 
 [Try the free 404 gallery](https://recently-viewed-products.fly.dev/shopify-404-recently-viewed?locale=en&ref=github). Visit the sample product, then open the missing product link. The example returns HTTP 404 and links back to the item you just viewed. You can clear the example history and repeat it.
 
-In an unpublished Dawn theme, open **App embeds**, enable **RVI product history** and select **Show the free gallery on 404 pages**. Save the draft. In one storefront preview, open a product and allow storefront preferences if Shopify asks. Then open a missing path such as `/rvi-history-preview-404` in the same market and preview. Confirm the earlier product is visible and its link works before you publish the theme.
+In an unpublished Dawn theme, open **App embeds**, enable **RVI product history** and select **Show the free gallery on 404 pages**. Save the draft. In one storefront preview, open a product and allow storefront preferences if Shopify asks. Then open a missing path such as `/rvi-history-preview-404` in the same market and preview. Confirm the earlier product is visible and its link works before you publish the theme. In RVI, **Setup → RVI browsing history → Test the 404 gallery** builds the missing-page link from one product in the same storefront or theme preview.
 
 **Deutsch.** [Kostenlose Galerie auf einer 404-Seite testen](https://recently-viewed-products.fly.dev/shopify-404-recently-viewed?locale=de&ref=github). Aktiviere im unveröffentlichten Theme den **RVI-Produktverlauf** und **Kostenlose Galerie auf 404-Seiten anzeigen**. Öffne danach ein Produkt und eine fehlende Seite in derselben Vorschau und im selben Markt.
 
