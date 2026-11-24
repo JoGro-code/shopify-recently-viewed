@@ -44,7 +44,9 @@ Die RVI-Produktverlaufsgalerie ist kostenlos. Basic ergänzt die Gast-Merkliste 
 
 [Essayer la démo en français](https://recently-viewed-products.fly.dev/shopify-approved-footwear-demo?locale=fr&ref=github). Dans le catalogue fictif, sélectionnez **EU 42** puis **Chercher une alternative validée** pour ouvrir la variante US 9 approuvée par la boutique. Recommencez avec **EU 43** pour voir le cas où aucune alternative n’a été validée.
 
-Après l’essai, choisissez **Voir RVI dans le Shopify App Store**. Dans votre boutique, ouvrez **Correspondances de pointures** dans RVI Basic et validez une paire exacte de variantes. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier le thème. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
+Après l’essai, choisissez **Vérifier un produit de ma boutique**. Collez un lien produit, indiquez le pays de livraison et choisissez la pointure épuisée, puis un remplacement que Shopify confirme dans le catalogue de ce pays. Cliquez sur **Préparer la paire** et copiez son code.
+
+Depuis le résultat, ouvrez le Shopify App Store. Dans RVI Basic, sous **Correspondances de pointures**, collez le code et laissez RVI vérifier à nouveau les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier le thème. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
 
 ## Preview the Dawn theme example
 
