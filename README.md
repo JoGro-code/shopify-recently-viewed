@@ -99,6 +99,8 @@ Match one Google Ads product report by item and day to full-day records of onlin
 
 [Try the public audit](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=en&ref=github-shopping-audit). In RVI Basic, go to **Stockout review → Audit Shopping spend**. To reproduce the example, download the [fictional Google Ads rows](examples/shopping-stockout/google-ads-item-days.csv?raw=1) and [fictional availability rows](examples/shopping-stockout/variant-availability.csv?raw=1), then select DE, EUR and Europe/Berlin. The first offer has €270.00 in ad costs on two documented stockout days. Another €75.00 for that offer stays unclassified.
 
+[Audit one of your own Google Shopping items for free](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=en&ref=github-shopping-audit#my-shopping-offer). Use the exact item ID from your report. Your files stay in the browser.
+
 The separate budget example uses fictional data to show how returns and current stock change the decision. [Follow a Shopping budget decision](https://recently-viewed-products.fly.dev/shopify-shopping-budget-case?locale=en&ref=github)
 
 For your own audit, filter the report to one Google Ads account, Merchant Center feed and country. Match the exact item ID to its Shopify variant and check that the full day is supported by evidence in the Ads account time zone. Use the ranked CSV to review the original offers in Merchant Center. [Google Ads reporting](https://support.google.com/google-ads/answer/3455573) · [Shopify inventory history](https://help.shopify.com/en/manual/inventory-and-locations/adjusting-inventory/adjustment-history)
@@ -125,6 +127,8 @@ Die RVI-Produktverlaufsgalerie ist kostenlos. Basic ergänzt die Gast-Merkliste 
 
 RVI Basic gleicht einen Google-Ads-Tagesbericht mit Belegen zur Online-Bestellbarkeit derselben Variante im Zielland ab. Die Arbeitsliste sortiert nach gemeldeten Werbekosten an belegten Ausverkaufstagen. Unvollständig belegte Tage bleiben offen. [Fiktiven Bericht online prüfen](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=de&ref=github-shopping-audit)
 
+[Einen eigenen Google-Shopping-Artikel kostenlos prüfen](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=de&ref=github-shopping-audit#my-shopping-offer). Verwende die genaue Artikel-ID aus dem Bericht. Deine Dateien bleiben im Browser.
+
 Ein zweites Beispiel zeigt mit fiktiven Daten, wie Retouren und aktueller Bestand die Budgetentscheidung verändern. [Shopping-Budgetentscheidung nachvollziehen](https://recently-viewed-products.fly.dev/shopify-shopping-budget-case?locale=de&ref=github)
 
 ## Pointure épuisée sur Shopify
@@ -140,6 +144,8 @@ Depuis le résultat, ouvrez le Shopify App Store. Dans RVI Basic, sous **Corresp
 ### Dépenses Shopping sur une pointure épuisée
 
 Dans RVI Basic, rapprochez un rapport Google Ads par article et par jour de vos justificatifs de disponibilité en ligne dans le pays ciblé. La liste classe les variantes par coût publicitaire les jours de rupture documentés. Les journées dont la disponibilité reste incertaine gardent leur propre catégorie. [Vérifier un rapport fictif](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=fr&ref=github-shopping-audit)
+
+[Vérifier gratuitement l’un de vos articles Google Shopping](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=fr&ref=github-shopping-audit#my-shopping-offer). Utilisez l’identifiant exact de l’article dans votre rapport. Vos fichiers restent dans le navigateur.
 
 Un deuxième exemple illustre l’effet des retours et du stock actuel sur la décision de budget, avec des données fictives. [Suivre une décision de budget Shopping](https://recently-viewed-products.fly.dev/shopify-shopping-budget-case?locale=fr&ref=github)
 
