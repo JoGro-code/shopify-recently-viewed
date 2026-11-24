@@ -4,6 +4,16 @@ This repository contains a Dawn theme example that remembers up to five recently
 
 [Pointure épuisée sur Shopify en français](#pointure-épuisée-sur-shopify)
 
+## Compare the sizes a shopper already viewed
+
+In RVI Basic, select two or three products in **Recently viewed products** and choose **Check current price and availability**. RVI checks each saved size or color against the Shopify storefront in the shopper’s market. An exact variant Shopify can’t verify is marked as unverified. The product titles link back to the selected variants.
+
+Enable **RVI product history** and add the **Recently viewed products** app block using Shopify’s theme editor. [RVI Basic in the Shopify App Store](https://apps.shopify.com/recently-viewed-products-7?locale=en&utm_source=github&utm_medium=referral&utm_campaign=rvi_relaunch_202611&utm_content=dawn_compare_readme)
+
+In RVI Basic wählst du zwei oder drei Produkte unter **Kürzlich angesehen**. Der Vergleich prüft Preis und Bestellbarkeit der gemerkten Größen oder Farben im aktuellen Markt. Die Produkttitel öffnen die ausgewählten Varianten. [RVI Basic im Shopify App Store](https://apps.shopify.com/recently-viewed-products-7?locale=de&utm_source=github&utm_medium=referral&utm_campaign=rvi_relaunch_202611&utm_content=dawn_compare_readme)
+
+Dans RVI Basic, sélectionnez deux ou trois produits récemment consultés. Choisissez **Vérifier le prix et la possibilité de commander** pour contrôler les variantes enregistrées dans le marché de l’acheteur. [RVI Basic sur le Shopify App Store](https://apps.shopify.com/recently-viewed-products-7?locale=fr&utm_source=github&utm_medium=referral&utm_campaign=rvi_relaunch_202611&utm_content=dawn_compare_readme)
+
 ## Free check for sold-out sizes
 
 [Check your Shopify product CSV](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en#audit-form-heading). If you stock at multiple locations, include your Shopify inventory export too. The files are processed in your browser.
