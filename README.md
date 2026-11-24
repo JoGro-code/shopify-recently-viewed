@@ -14,6 +14,14 @@ In RVI Basic wählst du zwei oder drei Produkte unter **Kürzlich angesehen**. D
 
 Dans RVI Basic, sélectionnez deux ou trois produits récemment consultés. Choisissez **Vérifier le prix et la possibilité de commander** pour contrôler les variantes enregistrées dans le marché de l’acheteur. [Comparer les variantes](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr&ref=github-compare#verified-comparison) · [RVI Basic sur le Shopify App Store](https://apps.shopify.com/recently-viewed-products-7?locale=fr&utm_source=github&utm_medium=referral&utm_campaign=rvi_relaunch_202611&utm_content=dawn_compare_readme)
 
+### Compare replacement variants after returns
+
+In RVI Basic, open **Compare fit returns** in the AI stockout worklist. Use a Shopify product export with unit costs and prepared delivery and return CSVs with exact Shopify variant IDs. Choose two replacements. You can specify the export language before checking current catalog prices and orderability in the historical buyer country. Enter the contribution for a returned unit separately, then review the exact pair before approving it. Fictional returns and costs can produce estimates of €32.25 and €24 per delivered unit.
+
+**Deutsch.** Öffne in der KI-Arbeitsliste **Passform-Retouren vergleichen**. Nutze den Shopify-Produktexport mit Stückkosten sowie vorbereitete CSVs zu Auslieferungen und Retoureneingängen mit exakten Shopify-Varianten-IDs. Wähle zwei Ersatzvarianten. Gib bei Bedarf die Exportsprache an und prüfe aktuelle Katalogpreise und Bestellbarkeit im Käuferland der bisherigen Verkäufe. Trage den Deckungsbeitrag für eine retournierte Einheit separat ein und prüfe das exakte Paar vor der Freigabe. Fiktive Retouren und Kosten können Schätzwerte von 32,25 € und 24 € je ausgelieferter Einheit ergeben.
+
+**Français.** Dans la liste de vérification IA de RVI Basic, ouvrez **Comparer les retours liés à la taille**. Utilisez l’export des produits Shopify avec les coûts unitaires et des CSV préparés de livraisons et de retours avec les identifiants exacts des variantes Shopify. Choisissez deux remplacements. Indiquez la langue de l’export si nécessaire et vérifiez les prix catalogue et la disponibilité à la commande dans le pays d’achat des ventes passées. Saisissez séparément la marge d’une unité retournée, puis vérifiez la paire exacte avant de l’approuver. Avec des retours et des coûts fictifs, les estimations peuvent être de 32,25 € et 24 € par unité livrée.
+
 ## Free check for sold-out sizes
 
 [Check your Shopify product CSV](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en#audit-form-heading). If you stock at multiple locations, include your Shopify inventory export too. The files are processed in your browser.
