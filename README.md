@@ -46,6 +46,8 @@ For a missing page, enable **RVI product history** and **Show the free gallery o
 
 [Pointure épuisée sur Shopify en français](#pointure-épuisée-sur-shopify)
 
+[Set up a Horizon gallery with your own products](https://recently-viewed-products.fly.dev/shopify-horizon-recently-viewed?locale=en&ref=github) · [Horizon-Galerie mit eigenen Produkten vorbereiten](https://recently-viewed-products.fly.dev/shopify-horizon-recently-viewed?locale=de&ref=github) · [Préparer la galerie Horizon avec vos produits](https://recently-viewed-products.fly.dev/shopify-horizon-recently-viewed?locale=fr&ref=github)
+
 ## Compare the sizes a shopper already viewed
 
 In RVI Basic, select two or three products in **Recently viewed products** and choose **Check current price and availability**. RVI checks each saved size or color against the Shopify storefront in the shopper’s market. An exact variant Shopify can’t verify is marked as unverified. The product titles link back to the selected variants. [Compare two variants from a public catalog or your Shopify store](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=en&ref=github-compare#verified-comparison)
