@@ -177,9 +177,13 @@ Ein zweites Beispiel zeigt mit fiktiven Daten, wie Retouren und aktueller Bestan
 
 Après l’essai, choisissez **Vérifier un produit de ma boutique**. Collez un lien produit, indiquez le pays de livraison et choisissez la pointure épuisée, puis un remplacement que Shopify confirme dans le catalogue de ce pays. Cliquez sur **Préparer la paire** et copiez son code.
 
-Si votre boutique utilise une fiche produit par couleur, [comparez directement les deux variantes](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=fr&ref=github&via=approved-demo#footwear-pair). Ouvrez **Vérifier deux variantes sur la même fiche ou sur des fiches séparées**, collez les deux liens contenant `?variant=` et choisissez le pays de livraison. Quand Shopify confirme que la variante d’origine est épuisée et que le remplacement est disponible, préparez le code de la paire.
+Si chaque couleur a sa propre fiche et que les deux fiches proposent uniquement des pointures, [utilisez les deux liens produit habituels](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=fr&ref=github&via=approved-demo#footwear-pair).
 
-Depuis le résultat, ouvrez le Shopify App Store. Dans RVI Basic, sous **Correspondances de pointures**, collez le code et laissez RVI vérifier à nouveau les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier le thème. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
+1. Collez le lien de la fiche d’origine, indiquez le pays de livraison, puis cliquez sur **Vérifier les variantes dans Shopify**. Si vous utilisez votre propre domaine, ajoutez l’adresse permanente de la boutique en `.myshopify.com`.
+2. Choisissez la pointure épuisée, puis cliquez sur **Vérifier cette pointure sur une autre fiche**. Collez le lien de la seconde fiche et relancez la vérification. Shopify doit confirmer un seul remplacement disponible à la même pointure.
+3. Cliquez sur **Préparer la paire**. Copiez le code ou téléchargez le fichier. Pour tester la galerie, choisissez **Configurer la galerie gratuite**, puis importez le code ou le fichier dans RVI.
+
+Pour proposer le remplacement aux acheteurs, ouvrez **Correspondances de pointures** dans RVI Basic. Importez le code et laissez RVI vérifier les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
 
 ### Dépenses Shopping sur une pointure épuisée
 
