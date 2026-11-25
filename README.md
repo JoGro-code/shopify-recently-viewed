@@ -183,7 +183,7 @@ Si chaque couleur a sa propre fiche et que les deux fiches proposent uniquement 
 
 1. Collez le lien de la fiche d’origine, indiquez le pays de livraison, puis cliquez sur **Vérifier les variantes dans Shopify**. Si vous utilisez votre propre domaine, ajoutez l’adresse permanente de la boutique en `.myshopify.com`.
 2. Choisissez la pointure épuisée, puis cliquez sur **Vérifier cette pointure sur une autre fiche**. Collez le lien de la seconde fiche et relancez la vérification. Shopify doit confirmer un seul remplacement disponible à la même pointure.
-3. Cliquez sur **Préparer la paire**. Copiez le code ou téléchargez le fichier. Pour tester la galerie, choisissez **Configurer la galerie gratuite**, puis importez le code ou le fichier dans RVI.
+3. Cliquez sur **Préparer la paire**. Copiez le code ou téléchargez le fichier. Pour tester la galerie, choisissez **Configurer la galerie gratuite**. Après l’installation, ouvrez **Reprendre un test préparé** dans la configuration de RVI. Collez le code ou importez le fichier avant de choisir le thème. Sélectionnez le pays de livraison indiqué pour tester dans le même marché.
 
 Pour vérifier deux ou trois coloris en une seule fois, choisissez d’abord la pointure épuisée et ouvrez **Comparer plusieurs coloris dans cette pointure**. Collez un lien de fiche par ligne. Après la vérification Shopify dans votre marché, choisissez un coloris disponible et confirmez qu’il convient avant de préparer la paire.
 
