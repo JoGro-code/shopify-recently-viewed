@@ -189,6 +189,10 @@ Pour vérifier deux ou trois coloris en une seule fois, choisissez d’abord la 
 
 Pour proposer le remplacement aux acheteurs, ouvrez **Correspondances de pointures** dans RVI Basic. Importez le code et laissez RVI vérifier les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
 
+### La pointure exacte vient de revenir à l’entrepôt
+
+Une commande payée attend son expédition et la même variante est en contrôle à l’entrepôt ? Dans RVI Basic, comparez le coût du contrôle et la marge avec le remplacement ou le remboursement déjà prévu. Vérifiez la disponibilité de cette solution pendant le contrôle. [Voir le cas fictif et le seuil de rentabilité](https://recently-viewed-products.fly.dev/shopify-fit-return-comparison?locale=fr&via=paid-order#received-original-example).
+
 ### Dépenses Shopping sur une pointure épuisée
 
 Dans RVI Basic, rapprochez un rapport Google Ads par article et par jour de vos justificatifs de disponibilité en ligne dans le pays ciblé. La liste classe les variantes par coût publicitaire les jours de rupture documentés. Les journées dont la disponibilité reste incertaine gardent leur propre catégorie. [Vérifier un rapport fictif](https://recently-viewed-products.fly.dev/shopify-shopping-stockout-audit?locale=fr&ref=github-shopping-audit)
