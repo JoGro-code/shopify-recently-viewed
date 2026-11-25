@@ -185,6 +185,8 @@ Si chaque couleur a sa propre fiche et que les deux fiches proposent uniquement 
 2. Choisissez la pointure épuisée, puis cliquez sur **Vérifier cette pointure sur une autre fiche**. Collez le lien de la seconde fiche et relancez la vérification. Shopify doit confirmer un seul remplacement disponible à la même pointure.
 3. Cliquez sur **Préparer la paire**. Copiez le code ou téléchargez le fichier. Pour tester la galerie, choisissez **Configurer la galerie gratuite**, puis importez le code ou le fichier dans RVI.
 
+Pour vérifier deux ou trois coloris en une seule fois, choisissez d’abord la pointure épuisée et ouvrez **Comparer plusieurs coloris dans cette pointure**. Collez un lien de fiche par ligne. Après la vérification Shopify dans votre marché, choisissez un coloris disponible et confirmez qu’il convient avant de préparer la paire.
+
 Pour proposer le remplacement aux acheteurs, ouvrez **Correspondances de pointures** dans RVI Basic. Importez le code et laissez RVI vérifier les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
 
 ### Dépenses Shopping sur une pointure épuisée
