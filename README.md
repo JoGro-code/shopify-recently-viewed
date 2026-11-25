@@ -119,6 +119,8 @@ When a variant sells out, Shopify Flow can look up the exact replacement variant
 
 If the size is already sold out, use the [public product check](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en#footwear-pair). Select the shopper's country and the unavailable size. Verify an orderable alternative in that country and save the exact pair code for review in RVI. The Flow template above starts when a variant newly sells out.
 
+To hand a two-country check to your client, open the [guest wishlist market check](https://recently-viewed-products.fly.dev/shopify-guest-wishlist?locale=en#wishlist-recipient-markets). Enter two exact variant links and the two countries. When both checks finish, copy the review link or open a WhatsApp or email draft. Your client opens the link and checks current prices and orderability.
+
 ### Check a Shopify stockout pair with n8n
 
 This free workflow checks whether an exact Shopify variant is sold out and a proposed replacement is orderable in the same size and buyer country. It reads the public catalog without a Shopify Admin token.
@@ -162,6 +164,8 @@ Markiere Varianten mit bis zu 14 geschätzten Bestandstagen anhand von Verkaufst
 Shopify Flow kann bei einer ausverkauften Variante die genauen Ersatzvarianten abrufen, die du in RVI freigegeben hast. [Vorlage in Shopify Flow öffnen](https://admin.shopify.com/apps/flow/editor/templates/01a20f69-4642-74f5-9339-207279e410bb). Installiere RVI und gib vor der Aktivierung ein Ersatzpaar in Basic frei. Du kannst auch den [Workflow mit Varianten-IDs](https://github.com/JoGro-code/shopify-recently-viewed/releases/tag/rvi-flow-replacement-variant-ids-v2) oder den [Workflow zur Statusprüfung](https://github.com/JoGro-code/shopify-recently-viewed/releases/tag/rvi-flow-variant-replacement-v1) herunterladen.
 
 Ist eine Größe bereits ausverkauft, öffne den [öffentlichen Produktcheck](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=de#footwear-pair). Wähle das Lieferland und die ausverkaufte Größe. Prüfe, ob eine passende Variante dort bestellbar ist, und speichere den Paarcode für die Prüfung in RVI. Die Flow-Vorlage oben startet, sobald eine Variante neu ausverkauft ist.
+
+Für die Abstimmung mit deinem Kunden kannst du den [Merklisten-Marktcheck](https://recently-viewed-products.fly.dev/shopify-guest-wishlist?locale=de#wishlist-recipient-markets) mit zwei exakten Variantenlinks und zwei Ländern durchführen. Nach der Prüfung kannst du den Prüflink kopieren oder einen Entwurf für WhatsApp oder E-Mail öffnen. Dein Kunde prüft damit aktuelle Preise und Bestellbarkeit.
 
 Die RVI-Produktverlaufsgalerie ist kostenlos. Basic ergänzt die Gast-Merkliste für exakte Varianten, das Teilen per Link, WhatsApp oder E-Mail und passende Alternativen für ausverkaufte Größen. Gib ein Ersatzpaar frei und aktiviere die Prüfung für geteilte Merklisten. Empfänger können dann bei einer ausverkauften Variante prüfen, ob der freigegebene Ersatz in ihrem Markt bestellbar ist. Basic kostet 2,49 USD je 30 Tage und bietet sieben kostenlose Testtage. [Gast-Merkliste ausprobieren](https://recently-viewed-products.fly.dev/?locale=de&demo=wishlist#size-demo) · [RVI über Shopify installieren](https://apps.shopify.com/recently-viewed-products-7?locale=de&utm_source=github&utm_medium=referral&utm_campaign=rvi_relaunch_202611&utm_content=dawn_readme)
 
