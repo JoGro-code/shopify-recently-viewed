@@ -16,7 +16,7 @@ jobs:
     env:
       N8N_IMAGE: docker.io/n8nio/n8n@sha256:cbfb9e50b10521a9cdc94147e570df9051a885e5a8b08bc540f5e51df5a85e1f
       WORKFLOW_SHA: 252b3dabbd4c87c93a2eccf1b7a09d750ab9b1360e14bc112b6a500d0f93fc10
-      HARNESS_SHA: c0b4a2048c1e9c7c4ed88d00e20f6931b1a9f89ba2f4f75a62834221591be7cb
+      HARNESS_SHA: 0be2cb655fc259b03d562b2506643a6cf802c8d18bb35751769831e7286d57cb
     steps:
       - name: Validate the public workflow in the official n8n runtime
         shell: bash

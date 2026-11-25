@@ -10,7 +10,7 @@ import { setTimeout as pause } from "node:timers/promises";
 import { promisify } from "node:util";
 
 const version = "2.49.5";
-const expectedSha = "1a4e8f65741e072774456d482564ec53b09b320a5fb2463e596727932e271d28";
+const expectedSha = "252b3dabbd4c87c93a2eccf1b7a09d750ab9b1360e14bc112b6a500d0f93fc10";
 const [workflowPath] = process.argv.slice(2);
 assert.ok(workflowPath, "Pass the exact published n8n workflow JSON path");
 assert.equal(process.env.RVI_N8N_QA_GO, "1", "Run this only in a coordinated isolated container");
