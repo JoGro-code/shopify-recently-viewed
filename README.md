@@ -106,7 +106,7 @@ In RVI Basic, enter both exact variant links under **Footwear size mappings**. O
 
 [Check your Shopify product CSV](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en#audit-form-heading). If you stock at multiple locations, include your Shopify inventory export too. The files are processed in your browser.
 
-In a result from your own catalog, open **Check replacement variants in Shopify**. Choose the pair, enter your permanent Shopify domain and specify the buyer country. Once Shopify confirms the original is unavailable and the replacement is orderable, save the pair file for RVI Basic and check the fit in your shop.
+In a result from your own catalog, open **Check replacement variants in Shopify**. Choose the pair, enter your permanent Shopify domain and specify the buyer country. Once Shopify confirms the original is unavailable and the replacement is orderable, review the fit. Use the two exact variants to [set up one free replacement](#set-up-one-free-shoe-size-replacement), or download the pair file to manage more replacements in RVI Basic.
 
 The sample shows a potential alternative for EU 42 and another size to review for restocking. Download the CSV action plan to see the exact variants and SKUs. [Open the footwear sample](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en&example=footwear#audit-result-heading)
 
@@ -167,7 +167,7 @@ For your own audit, filter the report to one Google Ads account, Merchant Center
 
 [Eigene Shopify-Produkt-CSV prüfen](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=de#audit-form-heading). Ergänze bei mehreren Lagerstandorten den Shopify-Bestandsexport. Die Dateien werden im Browser verarbeitet.
 
-Öffne im Ergebnis deines eigenen Katalogs **Ersatzvarianten in Shopify prüfen**. Wähle das Paar, gib deine dauerhafte Shopify-Domain an und wähle das Lieferland. Wenn Shopify den Ausverkauf und den bestellbaren Ersatz bestätigt, speichere die Paar-Datei für RVI Basic und prüfe die Passform im Shop.
+Öffne im Ergebnis deines eigenen Katalogs **Ersatzvarianten in Shopify prüfen**. Wähle das Paar, gib deine dauerhafte Shopify-Domain an und wähle das Lieferland. Wenn Shopify den Ausverkauf und den bestellbaren Ersatz bestätigt, prüfe die Passform. [Richte mit den beiden genauen Varianten einen kostenlosen Ersatz ein](#set-up-one-free-shoe-size-replacement) oder lade die Paar-Datei herunter, um weitere Ersatzpaare in RVI Basic zu verwalten.
 
 Das Beispiel zeigt eine mögliche Alternative für EU 42 und eine Größe zur Nachbestellprüfung. Der CSV-Aktionsplan enthält die genauen Varianten und SKUs. [Schuhbeispiel öffnen](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=de&example=footwear#audit-result-heading)
 
@@ -209,7 +209,7 @@ Si chaque couleur a sa propre fiche et que les deux fiches proposent uniquement 
 
 1. Collez le lien de la fiche d’origine, indiquez le pays de livraison, puis cliquez sur **Vérifier les variantes dans Shopify**. Si vous utilisez votre propre domaine, ajoutez l’adresse permanente de la boutique en `.myshopify.com`.
 2. Choisissez la pointure épuisée, puis cliquez sur **Vérifier cette pointure sur une autre fiche**. Collez le lien de la seconde fiche et relancez la vérification. Shopify doit confirmer un seul remplacement disponible à la même pointure.
-3. Cliquez sur **Préparer la paire**. Copiez le code ou téléchargez le fichier. Pour tester la galerie, choisissez **Configurer la galerie gratuite**. Après l’installation, ouvrez **Reprendre un test préparé** dans la configuration de RVI. Collez le code ou importez le fichier avant de choisir le thème. Sélectionnez le pays de livraison indiqué pour tester dans le même marché.
+3. Cliquez sur **Préparer la paire**, puis copiez le code ou téléchargez le fichier. Après avoir [installé RVI](https://recently-viewed-products.fly.dev/go/shopify/fr-dawn-free-size-offer), ouvrez **Configurer un remplacement gratuit**, puis **Remplir les champs avec une paire préparée**. Collez le code ou importez le fichier. Vérifiez les deux variantes et le pays de vente, confirmez le chaussant, puis choisissez **Vérifier et enregistrer l’offre**. Testez le remplacement dans un thème brouillon, dans le même pays.
 
 Pour vérifier deux ou trois coloris en une seule fois, choisissez d’abord la pointure épuisée et ouvrez **Comparer plusieurs coloris dans cette pointure**. Collez un lien de fiche par ligne. Après la vérification Shopify dans votre marché, choisissez un coloris disponible et confirmez qu’il convient avant de préparer la paire.
 
