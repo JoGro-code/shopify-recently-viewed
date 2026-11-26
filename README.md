@@ -10,6 +10,8 @@ In a draft Shopify theme, add **RVI shoe alternative** to the product templates 
 
 [Install RVI to set up a free replacement](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-free-size-offer)
 
+**For UK shops.** [Check a sold-out shoe size for UK shoppers](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en&ref=restock-gb&via=product-start#footwear-pair). The checker starts in the United Kingdom and shows both catalogue prices in GBP. Review the fit and save the pair file for RVI’s Free setup in a draft theme.
+
 **Deutsch.** Wähle in RVI **Kostenlosen Größenersatz einrichten**, bestätige ein exaktes Variantenpaar und wähle ein Käuferland. Setze **RVI-Schuhalternative** auf die Produktvorlagen beider Artikel. Bei einer gemeinsamen Vorlage genügt ein Block. [RVI für den kostenlosen Größenersatz installieren](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-size-offer)
 
 **Français.** Choisissez **Configurer un remplacement gratuit** dans RVI et validez deux variantes exactes pour un seul pays de vente. Placez le bloc **Alternative RVI** sur les deux modèles de fiche. Un bloc suffit si les deux produits partagent le même modèle. [Installer RVI pour configurer un remplacement gratuit](https://recently-viewed-products.fly.dev/go/shopify/fr-dawn-free-size-offer)
