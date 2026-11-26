@@ -183,6 +183,8 @@ Ein zweites Beispiel zeigt mit fiktiven Daten, wie Retouren und aktueller Bestan
 
 ## Pointure épuisée sur Shopify
 
+[Chercher un remplacement à partir d’une fiche produit Shopify](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=fr&ref=github&via=approved-demo#footwear-pair). Collez le lien de la fiche d’origine, indiquez le pays de livraison et choisissez la pointure épuisée. Si le formulaire vous le demande, ajoutez l’adresse permanente de votre boutique en `.myshopify.com`. Ouvrez **Comparer plusieurs coloris dans cette pointure**, puis **Chercher dans le catalogue Shopify**. Vérifiez le modèle et le chaussant de la variante disponible dans le pays choisi avant de préparer la paire.
+
 [Vérifier une pointure en rupture de stock dans votre collection](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=fr#shoe-filter-test). Comparez le filtre de pointure seul et le même filtre avec En stock. Ensuite, choisissez **Vérifier une variante de votre boutique** pour contrôler un remplacement dans le même marché.
 
 [Essayer la démo en français](https://recently-viewed-products.fly.dev/shopify-approved-footwear-demo?locale=fr&ref=github). Dans le catalogue fictif, sélectionnez **EU 42** puis **Chercher une alternative validée** pour ouvrir la variante US 9 approuvée par la boutique. Recommencez avec **EU 43** pour voir le cas où aucune alternative n’a été validée.
