@@ -1,0 +1,37 @@
+name: RVI n8n exact-size v3 validation
+on:
+  push:
+    branches:
+      - 'qa/n8n-exact-size-v3-20261126'
+    paths:
+      - '.github/workflows/rvi-n8n-exact-size-v3-qa.yml'
+      - 'qa/run-native-rvi-n8n-v3.mjs'
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    env:
+      N8N_IMAGE: docker.io/n8nio/n8n@sha256:cbfb9e50b10521a9cdc94147e570df9051a885e5a8b08bc540f5e51df5a85e1f
+      WORKFLOW_SHA: b65f0439b2de4b05b4540405296e0c4021ab5dcd1b36b4c62c292e030f443eaa
+      HARNESS_SHA: 447ce216062fd1f7d4db5b22c959c1dcea9f467fd81b252e3b28bf449bebb4cb
+    steps:
+      - name: Validate the public workflow in the official n8n runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          temp="$(mktemp -d)"
+          trap 'rm -rf -- "$temp"' EXIT
+          verify_download() {
+            local url="$1" target="$2" digest="$3"
+            curl --fail --silent --show-error --location --proto '=https' --tlsv1.2               --connect-timeout 9 --max-time 50 --retry 2 "$url" --output "$target"
+            printf '%s  %s\n' "$digest" "$target" | sha256sum --check --strict
+          }
+          verify_download "https://raw.githubusercontent.com/JoGro-code/shopify-recently-viewed/$GITHUB_SHA/qa/shopify-exact-size-replacement-v3.n8n.json"             "$temp/workflow.json" "$WORKFLOW_SHA"
+          verify_download "https://raw.githubusercontent.com/JoGro-code/shopify-recently-viewed/$GITHUB_SHA/qa/run-native-rvi-n8n-v3.mjs"             "$temp/run-native-rvi-n8n-v3.mjs" "$HARNESS_SHA"
+          chmod 755 "$temp"
+          chmod 644 "$temp/workflow.json" "$temp/run-native-rvi-n8n-v3.mjs"
+          docker pull --platform linux/amd64 "$N8N_IMAGE"
+          docker run --rm --init --platform linux/amd64 --pull never --network none --read-only             --cap-drop ALL --security-opt no-new-privileges             --memory 4096m --memory-swap 4096m --cpus 2 --pids-limit 256 --user 1000:1000             --tmpfs /tmp:rw,exec,nodev,nosuid,mode=1777,size=512m             --tmpfs /home/node/.n8n:rw,uid=1000,gid=1000,mode=0700,nodev,nosuid,size=256m             --mount "type=bind,src=$temp,dst=/fixture,readonly"             -e HTTP_PROXY= -e HTTPS_PROXY= -e FTP_PROXY= -e ALL_PROXY=             -e http_proxy= -e https_proxy= -e ftp_proxy= -e all_proxy=             -e NO_PROXY=127.0.0.1 -e no_proxy=127.0.0.1             -e N8N_USER_FOLDER=/home/node -e N8N_RUNNERS_MODE=internal             -e N8N_DIAGNOSTICS_ENABLED=false -e N8N_VERSION_NOTIFICATIONS_ENABLED=false             -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true -e RVI_N8N_QA_GO=1             --entrypoint node "$N8N_IMAGE" /fixture/run-native-rvi-n8n-v3.mjs /fixture/workflow.json "$WORKFLOW_SHA"
