@@ -4,7 +4,7 @@ Use a morning workflow to see which tracked variants are estimated to run out in
 
 Shopify Flow accepted this query in the native preview on a development store. That store returned zero rows for the selected window. Build the workflow in your store and check your preview before scheduling it.
 
-If a size sells out before replenishment, [check an exact replacement for US shoppers](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en&ref=github-flow&via=fit-return#footwear-pair) before installing RVI. Start with the original product link and the exact replacement variant from your own shop, compare both USD catalog prices, and confirm fit to request a measured pilot.
+If a size sells out before replenishment, [check an exact replacement for US shoppers](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en&ref=github-flow&via=fit-return#footwear-pair). Start with one public product link from your shop. Choose the sold-out size and check a candidate from your catalog. Compare both USD catalog prices and confirm the fit before downloading the pair. In RVI Setup, use the file to set up one free size replacement and test it in a draft theme.
 
 ## Build the inventory check
 
