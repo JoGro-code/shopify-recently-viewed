@@ -4,6 +4,8 @@ Use a morning workflow to see which tracked variants are estimated to run out in
 
 Shopify Flow accepted this query in the native preview on a development store. That store returned zero rows for the selected window. Build the workflow in your store and check your preview before scheduling it.
 
+If a size sells out before replenishment, [check an exact replacement for US shoppers](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en&ref=github-flow&via=fit-return#footwear-pair) before installing RVI. Start with the original product link and the exact replacement variant from your own shop, compare both USD catalog prices, and confirm fit to request a measured pilot.
+
 ## Build the inventory check
 
 1. In Shopify Flow, create a workflow with **Scheduled time**. Choose a daily time in your store's time zone. Keep it inactive while you configure it.
