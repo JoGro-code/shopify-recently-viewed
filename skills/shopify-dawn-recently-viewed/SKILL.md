@@ -1,11 +1,23 @@
 ---
 name: shopify-dawn-recently-viewed
-description: Guide Shopify merchants through setting up and testing RVI’s Free Gallery in an unpublished Dawn theme. Use when a merchant wants to display recently viewed products on Dawn product pages without editing theme code.
+description: Guide Shopify merchants through testing RVI’s Free Gallery or one approved replacement for a sold-out shoe size in an unpublished Dawn theme.
 ---
 
-# Set up the RVI Free Gallery in Dawn
+# Set up RVI in a Dawn draft
 
-Use Shopify access already granted for the task. If Shopify Admin is unavailable, guide the merchant through the same steps and ask what they see after each check. The merchant uses Shopify to review and confirm the app installation and uses the theme editor to save the draft.
+Use Shopify access already granted for the task. If Shopify Admin is unavailable, guide the merchant through the same steps and ask what they see after each check. The merchant reviews Shopify permissions, confirms installation, saves offers and saves changes to the draft theme.
+
+## Test one free replacement for a sold-out shoe size
+
+Use this path when the merchant wants to offer an immediately orderable alternative for one shoe size in one buyer country. For a US buyer, the merchant can open the [public US size check](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en&ref=restock-us&via=product-start#footwear-pair) with their own public Shopify product link. Have them select the exact sold-out and replacement variants, confirm the fit and choose **Download the pair (.txt)**.
+
+1. If the merchant chooses to install RVI, open the Shopify App Store listing in [English](https://recently-viewed-products.fly.dev/go/shopify/en-dawn-free-size-offer), [German](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-size-offer) or [French](https://recently-viewed-products.fly.dev/go/shopify/fr-dawn-free-size-offer). Have the merchant confirm installation in Shopify and use the Free plan.
+2. In English RVI Setup, open **Set up a free size replacement**, expand **Fill fields from a prepared pair** and use **Import prepared pair file (.txt)** if they downloaded a pair. The merchant can also select both exact variants and one buyer country manually. Have them review the variants and market, approve the fit and choose **Verify and save offer**. If they use a private storefront that Shopify cannot verify publicly, they can select **Prepare for a stockout** and test the pair in the draft.
+3. In the unpublished theme, add **RVI shoe alternative** to the product templates for both variants. Add it once if the products share a template. In the preview, select the saved buyer country and open the exact sold-out variant. Choose **Check the shoe alternative** and verify that the linked destination is the approved orderable variant. Check a sold-out size without an approved pair and confirm that it shows no offer.
+
+Report which installation, save and preview checks the merchant confirmed. Keep the theme unpublished.
+
+## Set up the Free Gallery
 
 Choose links in the merchant’s language.
 
