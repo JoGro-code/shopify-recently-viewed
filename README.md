@@ -18,6 +18,10 @@ In a draft Shopify theme, add **RVI shoe alternative** to the product templates 
 
 **Français.** Choisissez **Configurer un remplacement gratuit** dans RVI. Si vous avez vérifié une paire, importez le code ou le fichier sous **Reprendre un test préparé**. Vérifiez les variantes, le chaussant et le pays de vente. Placez le bloc **Alternative RVI** sur les deux modèles de fiche. Un bloc suffit si les deux produits partagent le même modèle. [Installer RVI pour configurer un remplacement gratuit](https://recently-viewed-products.fly.dev/go/shopify/fr-dawn-free-size-offer)
 
+### Keep product-page app blocks after a theme change
+
+Use the [Shopify theme app block preflight](theme-app-block-preflight/README.md) in GitHub Actions to check that the required blocks are still present and enabled in both product templates. The check reads the theme checkout without connecting to Shopify.
+
 ## Set up the Free Gallery
 
 After installation, add **Recently viewed products** to your product template and save it in Shopify’s theme editor. Open two products that use the same template in one browser. Allow storefront preferences if Shopify asks. The first product appears in the gallery on the second page.

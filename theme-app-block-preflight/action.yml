@@ -1,0 +1,15 @@
+name: Shopify Theme App Block Preflight
+description: Verify that required app blocks remain enabled and scheduled in Shopify product templates.
+branding:
+  icon: check-square
+  color: green
+inputs:
+  theme-root:
+    description: Theme directory relative to the checked-out repository.
+    default: '.'
+  placements:
+    description: JSON array of exact product template paths, Shopify app block types, and optional expected settings.
+    required: true
+runs:
+  using: node24
+  main: check.mjs
