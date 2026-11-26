@@ -18,6 +18,8 @@ In a draft Shopify theme, add **RVI shoe alternative** to the product templates 
 
 **Français.** Choisissez **Configurer un remplacement gratuit** dans RVI. Sélectionnez la variante épuisée ou collez son lien exact, puis saisissez le code du pays de l’acheteur. Ouvrez **Chercher un remplacement dans le catalogue Shopify**, cliquez sur **Vérifier le catalogue**, puis sur **Choisir cette variante** pour retenir un résultat. Confirmez le chaussant, puis choisissez **Vérifier et enregistrer l’offre**. Si vous avez vérifié une paire, importez le code ou le fichier sous **Reprendre un test préparé**. Vérifiez les variantes et le pays de l’acheteur, puis confirmez le chaussant. Placez le bloc **Alternative RVI** sur les deux modèles de fiche dans un thème brouillon. Un bloc suffit si les produits partagent le même modèle. Testez le remplacement dans le pays sélectionné. [Installer RVI pour configurer un remplacement gratuit](https://recently-viewed-products.fly.dev/go/shopify/fr-dawn-free-size-offer)
 
+**Español.** Si tu zapatería migró a Shopify desde PrestaShop o WooCommerce, [comprueba los enlaces de talla](https://recently-viewed-products.fly.dev/shopify-variant-link-check?locale=es). Abre la variante en el mercado del cliente y verifica que el carrito de prueba reciba la talla esperada antes de configurar un reemplazo.
+
 ### Keep product-page app blocks after a theme change
 
 Use the [Shopify theme app block preflight](theme-app-block-preflight/README.md) in GitHub Actions to check that the required blocks are still present and enabled in both product templates. The check reads the theme checkout without connecting to Shopify.
