@@ -1,0 +1,191 @@
+{
+  "name": "Check an exact-size replacement in the Shopify buyer market",
+  "nodes": [
+    {
+      "id": "549611f8-3237-49d0-a7bb-5ece602dbb71",
+      "name": "Check two variants",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "830a81d7-c71b-49af-8b70-d624cb1582d5",
+      "name": "Edit variant links and market",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"shop\": \"\",\n  \"country\": \"\",\n  \"language\": \"\",\n  \"sizeOption\": \"Size\",\n  \"sourceUrl\": \"\",\n  \"replacementUrl\": \"\"\n}",
+        "options": {}
+      }
+    },
+    {
+      "id": "9b996edc-e658-40ee-82e6-dd15c71f96aa",
+      "name": "Prepare Shopify request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "jsCode": "function prepareExactSize($input) {\n  const { shop, country, sizeOption, sourceUrl, replacementUrl, language = \"\" } = $input.first()?.json ?? {};\n  const shopDomain = /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.myshopify\\.com$/u;\n  const storefrontHost = /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z](?:[a-z0-9-]{0,61}[a-z0-9])?$/u;\n  const storefrontPath = /^(\\/[a-z]{2,3}(?:-[a-z0-9]{2,24})*)?(?:\\/collections\\/[a-z0-9][a-z0-9-]{0,254})?\\/products\\/([a-z0-9][a-z0-9-]{0,254})\\/?$/u;\n  const sizeNames = new Set([\"size\", \"shoe size\", \"größe\", \"groesse\", \"schuhgröße\", \"pointure\", \"taille\", \"talla\", \"taglia\", \"maat\", \"tamanho\"]);\n  const reservedRoots = new Set([\"/api\", \"/app\", \"/cdn\"]);\n  const shopifyServiceHosts = new Set([\"admin.shopify.com\", \"accounts.shopify.com\", \"apps.shopify.com\", \"help.shopify.com\"]);\n\n  function readProductLink(input) {\n    if (typeof input !== \"string\" || input.length > 2048 || /[\\s\\p{Cc}\\p{Cf}\\p{Cs}]/u.test(input)) return null;\n    const link = /^https:\\/\\/([^/]+)(\\/[^?#]+)\\?variant=([1-9][0-9]{0,19})$/u.exec(input);\n    if (!link || link[0] !== input) return null;\n    const [, host, path, id] = link;\n    if (host.length > 253 || !storefrontHost.test(host) || host.endsWith(\".localhost\") ||\n        host === \"shopifypreview.com\" || host.endsWith(\".shopifypreview.com\") ||\n        shopifyServiceHosts.has(host) || (host.endsWith(\".myshopify.com\") && host !== shop)) return null;\n    const product = storefrontPath.exec(path);\n    if (!product || product[0] !== path || reservedRoots.has(product[1])) return null;\n    const root = product[1] ?? \"\";\n    const handle = product[2];\n    return { host, root, id, handle, href: \"https://\" + host + root + \"/products/\" + handle + \"?variant=\" + id };\n  }\n\n  const selectedName = typeof sizeOption === \"string\" && sizeOption.length <= 32 ? sizeOption.trim().normalize(\"NFC\") : \"\";\n  if (typeof shop !== \"string\" || shop.length > 77 || /\\s/u.test(shop) || !shopDomain.test(shop) ||\n      typeof country !== \"string\" || country.length !== 2 || !/^[A-Z]{2}$/u.test(country) || country === \"ZZ\" ||\n      typeof language !== \"string\" || /\\s/u.test(language) || (language && !/^[A-Z]{2,3}(?:_[A-Z0-9]{2,4})?$/u.test(language)) ||\n      !sizeNames.has(selectedName.toLowerCase()) || /[\\p{Cc}\\p{Cf}\\p{Cs}]/u.test(sizeOption)) {\n    throw new Error(\"Enter a permanent Shopify domain, delivery country and exact size option name.\");\n  }\n  const source = readProductLink(sourceUrl);\n  const replacement = readProductLink(replacementUrl);\n  if (!source || !replacement || source.host !== replacement.host || source.root !== replacement.root ||\n      source.handle === replacement.handle || source.id === replacement.id) {\n    throw new Error(\"Use exact variant links for two different products on the same Shopify domain and market path.\");\n  }\n\n  const languageVariable = language ? \", $language: LanguageCode!\" : \"\";\n  const languageContext = language ? \", language: $language\" : \"\";\n  const query = [\n    \"query RviN8nExactSize($source: ID!, $replacement: ID!, $sourceHandle: String!,\",\n    \"  $replacementHandle: String!, $country: CountryCode!\" + languageVariable + \")\",\n    \"  @inContext(country: $country\" + languageContext + \") {\",\n    \"  shop { primaryDomain { host } }\",\n    \"  localization { country { isoCode currency { isoCode } } }\",\n    \"  source: node(id: $source) { ...RviN8nExactSizeVariant }\",\n    \"  replacement: node(id: $replacement) { ...RviN8nExactSizeVariant }\",\n    \"  sourceLink: product(handle: $sourceHandle) { id }\",\n    \"  replacementLink: product(handle: $replacementHandle) { id }\",\n    \"}\",\n    \"fragment RviN8nExactSizeVariant on ProductVariant {\",\n    \"  id availableForSale currentlyNotInStock requiresComponents\",\n    \"  price { amount currencyCode }\",\n    \"  selectedOptions { name value }\",\n    \"  product { id requiresSellingPlan }\",\n    \"}\",\n  ].join(\"\\n\");\n  const variantGid = (id) => \"gid://shopify/ProductVariant/\" + id;\n  const variables = {\n    source: variantGid(source.id),\n    replacement: variantGid(replacement.id),\n    sourceHandle: source.handle,\n    replacementHandle: replacement.handle,\n    country,\n    ...(language && { language }),\n  };\n  const selectedProduct = ({ id, handle, href }) => ({ id, handle, href });\n  const proof = {\n    shop, host: source.host, root: source.root, country, language, sizeOption: selectedName,\n    source: selectedProduct(source), replacement: selectedProduct(replacement),\n  };\n\n  return [{ json: { endpoint: \"https://\" + shop + \"/api/2026-10/graphql.json\", query, variables, proof } }];\n}\n\nreturn prepareExactSize($input);"
+      }
+    },
+    {
+      "id": "376b6944-5526-4f47-b963-ea2b3ac81e44",
+      "name": "Read the Shopify catalog",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        0
+      ],
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.endpoint }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ query: $json.query, variables: $json.variables }) }}",
+        "options": {
+          "timeout": 10000,
+          "redirect": {
+            "redirect": {
+              "followRedirects": false
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "265e188b-cc5a-4895-aac9-477a1cfff660",
+      "name": "Verify exact size and availability",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        0
+      ],
+      "parameters": {
+        "jsCode": "function verifyExactSize($input, $) {\n  const response = $input.first()?.json;\n  const proof = $(\"Prepare Shopify request\").first()?.json?.proof;\n  const output = (status, evidence = {}) => [{ json: { status, ...evidence } }];\n  const variantId = /^[1-9][0-9]{0,19}$/u;\n  const productId = /^gid:\\/\\/shopify\\/Product\\/[1-9][0-9]{0,19}$/u;\n  const priceAmount = /^(?:0|[1-9][0-9]{0,10})(?:\\.[0-9]{1,4})?$/u;\n\n  function optionText(value) {\n    return typeof value === \"string\" && value.length <= 180 &&\n      !/[\\p{Cc}\\p{Cf}\\p{Cs}]/u.test(value) ? value.trim().normalize(\"NFC\") : \"\";\n  }\n\n  function exactSize(options, expectedName) {\n    if (!Array.isArray(options) || options.length < 1 || options.length > 3) return \"\";\n    const names = new Set();\n    let size = \"\";\n    for (const option of options) {\n      const name = optionText(option?.name);\n      const value = optionText(option?.value);\n      const key = name.toLowerCase();\n      if (!name || !value || names.has(key)) return \"\";\n      names.add(key);\n      if (name === expectedName) size = value;\n    }\n    return size.length <= 64 && !/[@<>]|https?:|www\\./iu.test(size) ? size : \"\";\n  }\n\n  function readVariant(node, linked, expected, currency) {\n    const { id, product, price, availableForSale, currentlyNotInStock, requiresComponents } = node ?? {};\n    if (typeof expected?.id !== \"string\" || !variantId.test(expected.id) || expected.id !== expected.id.trim() ||\n        typeof expected.href !== \"string\" || id !== \"gid://shopify/ProductVariant/\" + expected.id ||\n        typeof linked?.id !== \"string\" || !productId.test(linked.id) || linked.id !== linked.id.trim() || product?.id !== linked.id ||\n        typeof price?.amount !== \"string\" || price.amount !== price.amount.trim() ||\n        !priceAmount.test(price.amount) || price.currencyCode !== currency ||\n        [availableForSale, currentlyNotInStock, requiresComponents, product?.requiresSellingPlan]\n          .some((flag) => typeof flag !== \"boolean\") ||\n        (!availableForSale && currentlyNotInStock)) return null;\n    return {\n      id: expected.id, href: expected.href, price: price.amount,\n      availableForSale, currentlyNotInStock, restricted: requiresComponents || product.requiresSellingPlan,\n      size: exactSize(node.selectedOptions, proof.sizeOption),\n    };\n  }\n\n  const body = response?.body;\n  const { data, errors, extensions } = body ?? {};\n  const market = data?.localization?.country;\n  const currency = market?.currency?.isoCode;\n  if (!proof || response?.statusCode !== 200 || !data || (errors != null && (!Array.isArray(errors) || errors.length !== 0)) ||\n      market?.isoCode !== proof.country || extensions?.context?.country !== proof.country ||\n      (proof.language && extensions?.context?.language !== proof.language) ||\n      typeof currency !== \"string\" || currency.length !== 3 || !/^[A-Z]{3}$/u.test(currency) ||\n      (proof.host !== proof.shop && data.shop?.primaryDomain?.host !== proof.host) ||\n      data.sourceLink?.id === data.replacementLink?.id) return output(\"unverified\");\n\n  const source = readVariant(data.source, data.sourceLink, proof.source, currency);\n  const replacement = readVariant(data.replacement, data.replacementLink, proof.replacement, currency);\n  if (!source || !replacement || source.restricted) return output(\"unverified\");\n  if (source.availableForSale) return output(\"source-orderable\");\n  if (!replacement.availableForSale || replacement.currentlyNotInStock || replacement.restricted) {\n    return output(\"replacement-unavailable\");\n  }\n  if (!source.size || !replacement.size) return output(\"unverified\");\n  if (source.size !== replacement.size) return output(\"size-mismatch\");\n  const verifiedProduct = ({ id, href, price }) => ({ id, href, price });\n  return output(\"eligible\", {\n    country: proof.country, currency, sizeOption: proof.sizeOption, size: source.size,\n    source: verifiedProduct(source), replacement: verifiedProduct(replacement),\n  });\n}\n\nreturn verifyExactSize($input, $);"
+      }
+    },
+    {
+      "id": "a5cfc398-d23a-4ce6-b941-411fa54854fd",
+      "name": "How to run the check",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        -528
+      ],
+      "parameters": {
+        "content": "### How it works\n\nUse this manual check before offering a same-size replacement for a sold-out Shopify variant. The workflow reads the public catalog for the buyer’s country and checks the selected size, exact variant identities and current orderability. An eligible result includes both exact links, the market, currency, size and current catalog prices. Confirm fit and delivery in Shopify before using the pair.\n\n### Setup\n\nOpen **Edit variant links and market**. Enter the permanent `.myshopify.com` address, the uppercase two-letter buyer country and the exact size option name used in Shopify, such as `Taille`. Paste HTTPS links for two different published products on the same storefront and language path, each ending in `?variant=` followed by its exact ID. Enter the Shopify language code for translated handles. The public query needs no Shopify credentials.\n\nRun the workflow manually and open **Verify exact size and availability**. If the pair is unverified, check the links, market and option name, then rerun. Recheck current prices and stock before using the pair.\n\n[Setup guide and example](https://recently-viewed-products.fly.dev/n8n-shopify-exact-size?ref=n8n)",
+        "height": 368,
+        "width": 768,
+        "color": 1
+      }
+    },
+    {
+      "id": "94b48306-c99c-4f3a-83ba-d58e97c18952",
+      "name": "Set up the pair",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        -112
+      ],
+      "parameters": {
+        "content": "## Set up the pair\n\nEnter the original and replacement in one buyer country. Run the check manually after confirming both links select the intended variants.",
+        "height": 264,
+        "width": 408,
+        "color": 7
+      }
+    },
+    {
+      "id": "6cec44af-5de4-4cc2-a203-80f5c6b1ee03",
+      "name": "Read and verify Shopify evidence",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        432,
+        -112
+      ],
+      "parameters": {
+        "content": "## Read and verify Shopify evidence\n\nValidate the inputs before requesting the catalog. A pair qualifies only when the source is sold out and the exact replacement is immediately orderable in the same size.",
+        "height": 264,
+        "width": 692,
+        "color": 7
+      }
+    }
+  ],
+  "connections": {
+    "Check two variants": {
+      "main": [
+        [
+          {
+            "node": "Edit variant links and market",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit variant links and market": {
+      "main": [
+        [
+          {
+            "node": "Prepare Shopify request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Shopify request": {
+      "main": [
+        [
+          {
+            "node": "Read the Shopify catalog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read the Shopify catalog": {
+      "main": [
+        [
+          {
+            "node": "Verify exact size and availability",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "none",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": false
+  }
+}
