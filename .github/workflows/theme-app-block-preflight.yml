@@ -1,0 +1,50 @@
+name: Test Shopify theme app block preflight
+"on": workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Run the action tests
+        run: node --test theme-app-block-preflight/check.test.mjs
+      - name: Prepare two example Shopify templates
+        run: |
+          mkdir -p .theme-preflight-test/templates
+          cat > .theme-preflight-test/templates/product.json <<'JSON'
+          {
+            "sections": {
+              "main": {
+                "type": "apps",
+                "blocks": {
+                  "replacement": {
+                    "type": "shopify://apps/example-app/blocks/replacement/12345678-1234-1234-1234-123456789abc",
+                    "settings": { "enabled": true }
+                  }
+                },
+                "block_order": ["replacement"]
+              }
+            },
+            "order": ["main"]
+          }
+          JSON
+          cp .theme-preflight-test/templates/product.json .theme-preflight-test/templates/product.alternate.json
+      - uses: ./theme-app-block-preflight
+        with:
+          theme-root: .theme-preflight-test
+          placements: |
+            [
+              {
+                "template": "templates/product.json",
+                "blockType": "shopify://apps/example-app/blocks/replacement/12345678-1234-1234-1234-123456789abc",
+                "settings": { "enabled": true }
+              },
+              {
+                "template": "templates/product.alternate.json",
+                "blockType": "shopify://apps/example-app/blocks/replacement/12345678-1234-1234-1234-123456789abc"
+              }
+            ]
