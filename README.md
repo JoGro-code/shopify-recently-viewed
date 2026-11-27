@@ -42,7 +42,7 @@ Si tu zapatería migró a Shopify desde PrestaShop o WooCommerce, [comprueba los
 
 ### Keep product-page app blocks after a theme change
 
-Use the [Shopify theme app block preflight](theme-app-block-preflight/README.md) in GitHub Actions to check that the required blocks are still present and enabled in both product templates. The check reads the theme checkout without connecting to Shopify.
+Add the [Shopify theme app block preflight release](https://github.com/JoGro-code/shopify-theme-app-block-preflight/releases/tag/v1.0.0) to a pull-request workflow with `uses: JoGro-code/shopify-theme-app-block-preflight@v1.0.0`. The action checks that required blocks are present and enabled in the selected templates without connecting to Shopify. [See the configuration examples](theme-app-block-preflight/README.md).
 
 ## Set up the Free Gallery
 
