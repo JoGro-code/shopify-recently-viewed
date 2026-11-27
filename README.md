@@ -22,7 +22,7 @@ Test in an unpublished Shopify theme. Choose **Open Shopify theme library** and 
 
 [Use the apparel stockout skill](https://recently-viewed-products.fly.dev/.well-known/agent-skills/shopify-apparel-stockout-replacement/SKILL.md) to prepare the clothing check with an assistant.
 
-Run `npx skills add https://recently-viewed-products.fly.dev --skill shopify-apparel-stockout-replacement` to add the skill. You start the catalog check, confirm the fit and approve any app installation in Shopify.
+Run `npx skills add JoGro-code/shopify-recently-viewed --skill shopify-apparel-stockout-replacement` to add the skill. You start the catalog check, confirm the fit and approve any app installation in Shopify.
 
 **Deutsch.** Öffne nach der Installation **Kostenlosen Größenersatz einrichten**. Wähle beide genauen Varianten und das Käuferland oder suche über **Im Shopify-Katalog nach Ersatz suchen** → **Katalog prüfen** → **Variante übernehmen**. Ein geprüftes Paar lädst du unter **Felder mit vorbereitetem Paar ausfüllen** über **Kopierten Paarcode einfügen** oder als `.txt`- oder `.json`-Datei. Prüfe beide Varianten und das Käuferland, bestätige die Passform und wähle **Angebot prüfen und speichern**. Öffne über **Shopify-Theme-Bibliothek öffnen** einen unveröffentlichten Entwurf. Ein Editor-Link mit Produktvorlage bietet den direkten Einbau der **RVI-Schuhalternative**. Bei einem reinen Vorschaulink nutze **Ausgangsprodukt im Editor öffnen** und füge den Block manuell hinzu. Setze den Block einmal pro verwendeter Produktvorlage und prüfe den Ersatz im gewählten Käuferland. [RVI für den kostenlosen Größenersatz installieren](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-size-offer)
 
