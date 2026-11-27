@@ -8,7 +8,7 @@ This repository contains a Dawn theme example that remembers up to five recently
 
 RVI’s Free plan can show one approved replacement for a sold-out shoe size on its product page in one buyer country. After installation, open **Set up a free size replacement** in RVI. Choose the exact sold-out variant or paste its storefront link and enter the buyer country code. Use **Find replacements in the Shopify catalog** → **Check catalog** → **Use this variant**, or enter both exact variant links.
 
-If you already checked a pair, expand **Fill fields from a prepared pair** and choose **Paste copied pair code**. You can also paste it into **Prepared pair code or n8n result** and choose **Use this pair**, or choose **Import one prepared pair (.txt or .json)**.
+If you already checked a pair, choose **Use a copied pair** on your first Free setup screen and then **Paste copied pair code**. In the Free editor, **Fill fields from a prepared pair** opens the same controls. You can also paste into **Prepared pair code or n8n result** and choose **Use this pair**, or import the .txt or .json file.
 
 Review the exact variants and country, confirm the fit and select **Verify and save offer**.
 
@@ -205,7 +205,7 @@ For your own audit, filter the report to one Google Ads account, Merchant Center
 
 [Eigene Shopify-Produkt-CSV prüfen](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=de#audit-form-heading). Ergänze bei mehreren Lagerstandorten den Shopify-Bestandsexport. Die Dateien werden im Browser verarbeitet.
 
-Öffne im Ergebnis deines eigenen Katalogs **Ersatzvarianten in Shopify prüfen**. Wähle das Paar, gib deine dauerhafte Shopify-Domain an und wähle das Lieferland. Wenn Shopify den Ausverkauf und den bestellbaren Ersatz bestätigt, prüfe die Passform. [Richte mit den beiden genauen Varianten einen kostenlosen Ersatz ein](#set-up-one-free-shoe-size-replacement) oder lade die Paar-Datei herunter, um weitere Ersatzpaare in RVI Basic zu verwalten.
+Öffne im Ergebnis deines eigenen Katalogs **Ersatzvarianten in Shopify prüfen**. Wähle das Paar, gib deine dauerhafte Shopify-Domain an und wähle das Lieferland. Wenn Shopify den Ausverkauf und den bestellbaren Ersatz bestätigt, prüfe die Passform. Kopiere den Paarcode. Wähle bei der ersten Free-Einrichtung in RVI **Kopiertes Paar verwenden** und dann **Kopierten Paarcode einfügen**. Im Free-Editor öffnet **Felder mit vorbereitetem Paar ausfüllen** dieselben Eingaben. [Die Anleitung zeigt die Prüfung im unveröffentlichten Theme](#set-up-one-free-shoe-size-replacement).
 
 Das Beispiel zeigt eine mögliche Alternative für EU 42 und eine Größe zur Nachbestellprüfung. Der CSV-Aktionsplan enthält die genauen Varianten und SKUs. [Schuhbeispiel öffnen](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=de&example=footwear#audit-result-heading)
 
@@ -251,7 +251,7 @@ Si chaque couleur a sa propre fiche et que les deux fiches proposent uniquement 
 
 1. Collez le lien de la fiche d’origine, indiquez le pays de livraison, puis cliquez sur **Vérifier les variantes dans Shopify**. Si vous utilisez votre propre domaine, ajoutez l’adresse permanente de la boutique en `.myshopify.com`.
 2. Choisissez la pointure épuisée, puis cliquez sur **Vérifier cette pointure sur une autre fiche**. Collez le lien de la seconde fiche et relancez la vérification. Shopify doit confirmer un seul remplacement disponible à la même pointure.
-3. Cliquez sur **Préparer la paire**, puis copiez le code ou téléchargez le fichier. Après avoir [installé RVI](https://recently-viewed-products.fly.dev/go/shopify/fr-dawn-free-size-offer), ouvrez **Configurer un remplacement gratuit**, puis **Remplir les champs avec une paire préparée**. Collez le code ou importez le fichier. Vérifiez les deux variantes et le pays de vente, confirmez le chaussant, puis choisissez **Vérifier et enregistrer l’offre**. Testez le remplacement dans un thème brouillon, dans le même pays.
+3. Cliquez sur **Préparer la paire**, puis copiez le code ou téléchargez le fichier. Après avoir [installé RVI](https://recently-viewed-products.fly.dev/go/shopify/fr-dawn-free-size-offer), choisissez **Utiliser une paire copiée** lors de la première configuration Free, puis **Coller le code copié**. Dans l’éditeur Free, **Remplir les champs avec une paire préparée** ouvre les mêmes champs. Vous pouvez aussi importer le fichier. Vérifiez les deux variantes et le pays de vente, confirmez le chaussant, puis choisissez **Vérifier et enregistrer l’offre**. Testez le remplacement dans un thème brouillon, dans le même pays.
 
 Pour vérifier deux ou trois coloris en une seule fois, choisissez d’abord la pointure épuisée et ouvrez **Comparer plusieurs coloris dans cette pointure**. Collez un lien de fiche par ligne. Après la vérification Shopify dans votre marché, choisissez un coloris disponible et confirmez qu’il convient avant de préparer la paire.
 
