@@ -4,6 +4,8 @@ This repository contains a Dawn theme example that remembers up to five recently
 
 ## Set up one free shoe-size replacement
 
+**For US shoppers.** [Check a sold-out size in your own Shopify catalog](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en&ref=github-flow&via=fit-return#footwear-pair). Choose the exact size, verify an orderable replacement for the United States, and save the pair code before opening the Free installation link.
+
 RVI’s Free plan can show one approved replacement for a sold-out shoe size on its product page in one buyer country. After installation, open **Set up a free size replacement** in RVI. Choose the exact sold-out variant or paste its storefront link and enter the buyer country code. Use **Find replacements in the Shopify catalog** → **Check catalog** → **Use this variant**, or enter both exact variant links.
 
 If you already checked a pair, expand **Fill fields from a prepared pair** and choose **Paste copied pair code**. You can also paste it into **Prepared pair code or n8n result** and choose **Use this pair**, or choose **Import one prepared pair (.txt or .json)**.
