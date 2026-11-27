@@ -173,6 +173,10 @@ In the RVI admin, open **Size searches with no results** from the Basic **AI sto
 
 [Try the no-result shoe search example](https://recently-viewed-products.fly.dev/shopify-search-rescue?locale=en&ref=github-search#search-intent-example). It uses fictional data to group compatible phrases and show how many more orders are needed to break even when testing one exact phrase.
 
+### Check an approved Shopify size pair with Make
+
+The [Make blueprint preview](https://github.com/JoGro-code/shopify-recently-viewed/releases/tag/rvi-make-approved-size-pair-preview-v1) checks one merchant-approved pair with built-in Make Tools and HTTP. It reads the public Shopify catalog for the selected buyer country and requires the exact size and listed fit. The live Shopify request and local filters have been tested. Native Make import and template-library placement are pending.
+
 ### Audit Google Shopping spend when a size sells out
 
 Match one Google Ads product report by item and day to full-day records of online orderability in your target country. For each matching offer, RVI Basic lists ad cost on documented stockout days. Any day with partial or missing coverage stays unclassified. The two files stay in the browser.
