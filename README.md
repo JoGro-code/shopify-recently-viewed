@@ -20,9 +20,17 @@ Test in an unpublished Shopify theme. Choose **Open Shopify theme library** and 
 
 **Find another colour from one sold-out clothing variant.** Paste the exact variant link and choose the buyer country. RVI checks size and fit options across colours of the same product and on separate colour pages. It checks the whole combination, including waist and leg length when Shopify provides both. Select a result to recheck stock, then confirm the model and fit before transferring the pair to Free setup. If you know the other colour, paste its exact variant link on the same product or the URL of its separate product page. [Check a clothing size](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=en&ref=github) · [Deutsch](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=de&ref=github) · [Français](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=fr&ref=github) · [Español](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=es&ref=github)
 
-[Use the apparel stockout skill](https://recently-viewed-products.fly.dev/.well-known/agent-skills/shopify-apparel-stockout-replacement/SKILL.md) to prepare the clothing check with an assistant.
+[Use the apparel stockout skill](https://recently-viewed-products.fly.dev/.well-known/agent-skills/shopify-apparel-stockout-replacement/SKILL.md) when a clothing size sells out and another colour may still ship. Install it from your agent project.
 
-Run `npx skills add JoGro-code/shopify-recently-viewed --skill shopify-apparel-stockout-replacement` to add the skill. You start the catalog check, confirm the fit and approve any app installation in Shopify.
+```sh
+npx skills add JoGro-code/shopify-recently-viewed --skill shopify-apparel-stockout-replacement
+```
+
+Copy this prompt and replace the product link and buyer country.
+
+> My Shopify clothing variant `[public product URL with ?variant=…]` is sold out for shoppers in `[buyer country]`. Use `shopify-apparel-stockout-replacement` to prepare a check for another colour of the same model with the same size and fit.
+
+Open the [buyer-market checker](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=en&ref=agent-skill#apparel-market-form), start the Shopify catalog check and confirm the fit for the exact variant. You approve any app installation on Shopify.
 
 **Deutsch.** Öffne nach der Installation **Kostenlosen Größenersatz einrichten**. Wähle beide genauen Varianten und das Käuferland oder suche über **Im Shopify-Katalog nach Ersatz suchen** → **Katalog prüfen** → **Variante übernehmen**. Ein geprüftes Paar lädst du unter **Felder mit vorbereitetem Paar ausfüllen** über **Kopierten Paarcode einfügen** oder als `.txt`- oder `.json`-Datei. Prüfe beide Varianten und das Käuferland, bestätige die Passform und wähle **Angebot prüfen und speichern**. Öffne über **Shopify-Theme-Bibliothek öffnen** einen unveröffentlichten Entwurf. Ein Editor-Link mit Produktvorlage bietet den direkten Einbau der **RVI-Schuhalternative**. Bei einem reinen Vorschaulink nutze **Ausgangsprodukt im Editor öffnen** und füge den Block manuell hinzu. Setze den Block einmal pro verwendeter Produktvorlage und prüfe den Ersatz im gewählten Käuferland. [RVI für den kostenlosen Größenersatz installieren](https://recently-viewed-products.fly.dev/go/shopify/de-dawn-free-size-offer)
 
