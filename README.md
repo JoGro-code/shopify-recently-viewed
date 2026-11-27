@@ -147,6 +147,8 @@ When a variant sells out, Shopify Flow can look up the exact replacement variant
 
 In the Flow action picker, clear **Installed apps**, then search for **RVI Recently Viewed Products**. Open the app preview to see **Check approved replacement** for Free and **Get approved replacement variants** for Basic. [Install RVI from the Shopify App Store](https://recently-viewed-products.fly.dev/go/shopify/en-flow-release-install) or [download the Free status workflow](https://github.com/JoGro-code/shopify-recently-viewed/releases/tag/rvi-flow-free-replacement-status-v1).
 
+To verify stock when a workflow runs, add **Check orderable approved replacement**. Map the trigger’s exact Shopify variant ID to **Source variant ID** and enter the buyer country, such as **US**, in **Buyer country**. Continue to your next step when the status is `ORDERABLE_REPLACEMENT`. Use the returned IDs. If the original becomes orderable again, the action returns `SOURCE_ORDERABLE` with an empty list. Free checks its one saved pair in its buyer country. Basic checks up to three approved replacements for the selected variant.
+
 If the size is already sold out, use the [public product check](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en#footwear-pair). Select the shopper's country and the unavailable size. Verify an orderable alternative in that country and save the exact pair code for review in RVI. The Flow template above starts when a variant newly sells out.
 
 To hand a two-country check to your client, open the [guest wishlist market check](https://recently-viewed-products.fly.dev/shopify-guest-wishlist?locale=en#wishlist-recipient-markets). Enter two exact variant links and the two countries. When both checks finish, copy the review link or open a WhatsApp or email draft. Your client opens the link and checks current prices and orderability.
@@ -197,6 +199,8 @@ Shopify Flow kann bei einer ausverkauften Variante die genauen Ersatzvarianten a
 
 Entferne in der Flow-Aktionsauswahl den Filter **Installierte Apps** und suche nach **RVI Recently Viewed Products**. In der App-Vorschau findest du **Check approved replacement** für Free und **Get approved replacement variants** für Basic. [Installiere RVI im Shopify App Store](https://recently-viewed-products.fly.dev/go/shopify/de-flow-release-install) oder [lade den kostenlosen Status-Workflow herunter](https://github.com/JoGro-code/shopify-recently-viewed/releases/tag/rvi-flow-free-replacement-status-v1).
 
+Für die aktuelle Bestandsprüfung füge **Check orderable approved replacement** hinzu. Übernimm die genaue Shopify-Varianten-ID des Auslösers in **Source variant ID** und trage das Käuferland in **Buyer country** ein, zum Beispiel **DE**. Verwende die ausgegebenen IDs im nächsten Schritt, wenn der Status `ORDERABLE_REPLACEMENT` lautet. Ist die Originalvariante wieder bestellbar, liefert `SOURCE_ORDERABLE` eine leere Liste. Free prüft das eine gespeicherte Paar im Käuferland. Basic prüft bis zu drei freigegebene Ersatzvarianten pro Ausgangsvariante.
+
 Ist eine Größe bereits ausverkauft, öffne den [öffentlichen Produktcheck](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=de#footwear-pair). Wähle das Lieferland und die ausverkaufte Größe. Prüfe, ob eine passende Variante dort bestellbar ist, und speichere den Paarcode für die Prüfung in RVI. Die Flow-Vorlage oben startet, sobald eine Variante neu ausverkauft ist.
 
 Für die Abstimmung mit deinem Kunden kannst du den [Merklisten-Marktcheck](https://recently-viewed-products.fly.dev/shopify-guest-wishlist?locale=de#wishlist-recipient-markets) mit zwei exakten Variantenlinks und zwei Ländern durchführen. Nach der Prüfung kannst du den Prüflink kopieren oder einen Entwurf für WhatsApp oder E-Mail öffnen. Dein Kunde prüft damit aktuelle Preise und Bestellbarkeit.
@@ -234,6 +238,8 @@ Si chaque couleur a sa propre fiche et que les deux fiches proposent uniquement 
 Pour vérifier deux ou trois coloris en une seule fois, choisissez d’abord la pointure épuisée et ouvrez **Comparer plusieurs coloris dans cette pointure**. Collez un lien de fiche par ligne. Après la vérification Shopify dans votre marché, choisissez un coloris disponible et confirmez qu’il convient avant de préparer la paire.
 
 Pour proposer un premier remplacement sur la fiche produit dans un seul pays, suivez la [configuration du remplacement gratuit](#set-up-one-free-shoe-size-replacement). Pour gérer plusieurs paires, ouvrez **Correspondances de pointures** dans RVI Basic. Importez le code et laissez RVI vérifier les deux variantes. Vérifiez le chaussant et la livraison avant d’approuver la paire. Activez ensuite **Afficher les alternatives sur la fiche produit** dans un thème brouillon et testez la pointure épuisée avant de publier. [Suivre le guide de configuration](https://recently-viewed-products.fly.dev/variant-recovery-setup?locale=fr)
+
+Dans Shopify Flow, ajoutez **Check orderable approved replacement** pour vérifier la disponibilité au moment du déclenchement. Renseignez l’identifiant exact de la variante et un pays, par exemple **FR**. Utilisez les identifiants retournés lorsque le statut est `ORDERABLE_REPLACEMENT`. Si la variante d’origine est de nouveau disponible, le statut `SOURCE_ORDERABLE` renvoie une liste vide.
 
 ### La pointure exacte vient de revenir à l’entrepôt
 
