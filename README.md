@@ -142,6 +142,8 @@ In a result from your own catalog, open **Check replacement variants in Shopify*
 
 The sample shows a potential alternative for EU 42 and another size to review for restocking. Download the CSV action plan to see the exact variants and SKUs. [Open the footwear sample](https://recently-viewed-products.fly.dev/shopify-variant-audit?locale=en&example=footwear#audit-result-heading)
 
+[Check a public Shopify collection](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=en&ref=github#apparel-collection-scan) · [Shopify-Kollektion prüfen](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=de&ref=github#apparel-collection-scan). Choose a buyer country to find orderable same-size alternatives for sold-out variants. Rank candidates by the original variant’s historical net units with an optional Shopify sales CSV. The file stays in your browser.
+
 If your collection shows sold-out shoe sizes, compare the selected size with and without Shopify's In stock filter. The guide walks through an example in US sizes and builds both comparison links. [Shopify shoe-size filter guide](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter)
 
 [Check the exact variant on a product card](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=en#collection-card-check). Paste the card link with its variant ID and choose the buyer country. If Shopify reports it unavailable, you can take the exact variant into the free same-size replacement check.
