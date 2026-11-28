@@ -146,6 +146,8 @@ If your collection shows sold-out shoe sizes, compare the selected size with and
 
 [Check the exact variant on a product card](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=en#collection-card-check). Paste the card link with its variant ID and choose the buyer country. If Shopify reports it unavailable, you can take the exact variant into the free same-size replacement check.
 
+[Check up to eight selected cards](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=en&mode=batch#collection-card-check) from one Shopify store and one buyer country. Download the exact variant results as CSV. [Mehrere Karten prüfen](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=de&mode=batch#collection-card-check) · [Comprobar varias tarjetas](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=es&mode=batch#collection-card-check)
+
 [Produktkarte prüfen](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=de#collection-card-check) · [Comprobar variante](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=es#collection-card-check)
 
 ### Build a Shopify Shop by size menu
@@ -250,6 +252,8 @@ Ein zweites Beispiel zeigt mit fiktiven Daten, wie Retouren und aktueller Bestan
 [Vérifier une pointure en rupture de stock dans votre collection](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=fr#shoe-filter-test). Comparez le filtre de pointure seul et le même filtre avec En stock. Ensuite, choisissez **Vérifier une variante de votre boutique** pour contrôler un remplacement dans le même marché.
 
 [Contrôler la variante liée à une carte produit](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=fr#collection-card-check). Collez le lien de la carte avec son identifiant de variante et choisissez le pays de l’acheteur. Shopify confirme la disponibilité de cette variante dans le marché sélectionné.
+
+[Vérifier jusqu’à huit cartes](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=fr&mode=batch#collection-card-check) de la même boutique et dans un seul marché. Téléchargez les résultats de chaque variante en CSV.
 
 [Essayer la démo en français](https://recently-viewed-products.fly.dev/shopify-approved-footwear-demo?locale=fr&ref=github). Dans le catalogue fictif, sélectionnez **EU 42** puis **Chercher une alternative validée** pour ouvrir la variante US 9 approuvée par la boutique. Recommencez avec **EU 43** pour voir le cas où aucune alternative n’a été validée.
 
