@@ -158,6 +158,8 @@ Use one collection for the menu. In a preview of your own storefront market, ena
 
 Open each link in the same market. Check both active filters and the exact buyable size on a product page before pasting the link into Shopify Navigation.
 
+For a clothing stock check, [find a collection from your Shopify store address](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=en&ref=github#apparel-collection-scan). Select the buyer country, find the collection by title, and choose it. The product check starts when you choose **Check up to 36 products**.
+
 [Build menu links](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=en&ref=shop-by-size#shop-by-size-menu) · [Créer des liens par pointure](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=fr&ref=shop-by-size#shop-by-size-menu) · [Crear enlaces por talla](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=es&ref=shop-by-size#shop-by-size-menu)
 
 
