@@ -8,7 +8,7 @@ This repository contains a Dawn theme example that remembers up to five recently
 
 RVI’s Free plan can show one approved replacement for a sold-out shoe size on its product page in one buyer country. After installation, open **Set up a free size replacement** in RVI. Choose the exact sold-out variant or paste its storefront link and enter the buyer country code. Use **Find replacements in the Shopify catalog** → **Check catalog** → **Use this variant**, or enter both exact variant links.
 
-If you already checked a pair, choose **Use a copied pair** on your first Free setup screen and then **Paste copied pair code**. In the Free editor, **Fill fields from a prepared pair** opens the same controls. You can also paste into **Prepared pair code or n8n result** and choose **Use this pair**, or import the .txt or .json file.
+If you already checked a pair, choose **Use a copied pair** on your first Free setup screen and then **Paste copied pair code**. In the Free editor, **Fill fields from a prepared pair** opens the same controls. You can also paste the original RVI review link into **RVI review link, pair code or n8n result** and choose **Use this pair**, or import the .txt or .json file. Review the exact variants and buyer country before approving the fit.
 
 Review the exact variants and country, confirm the fit and select **Verify and save offer**.
 
