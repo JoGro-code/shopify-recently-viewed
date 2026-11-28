@@ -4,6 +4,8 @@ Trail Sneaker EU 42 is sold out in the shared guest wishlist. In the live Shopif
 
 If the City price changes before it reaches the cart, RVI displays the current amount on the wishlist and asks the buyer to confirm it. On confirmation, RVI checks the exact approved variant, its availability and its price again in the buyer's country. If the price changes again, the wishlist displays the new amount and asks again.
 
+If a replacement sells out during the add, RVI checks the same Shopify cart and the exact variant again. When that cart evidence confirms the first choice is absent, the wishlist shows the remaining approved options. Adding another option takes a separate click.
+
 ![Shopify demo showing sold-out Trail Sneaker EU 42, the approved City Sneaker EU 42, and a new confirmation button after the replacement price changed to €54](replacement-price-confirmation.png)
 
 *Captured on the published Shopify demo. €54 is a simulated price used to show the confirmation step.*
