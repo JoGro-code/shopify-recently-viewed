@@ -183,6 +183,8 @@ To verify stock when a workflow runs, add **Check orderable approved replacement
 
 If the size is already sold out, use the [public product check](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en#footwear-pair). Select the shopper's country and the unavailable size. Verify an orderable alternative in that country and save the exact pair code for review in RVI. The Flow template above starts when a variant newly sells out.
 
+For several clothing sizes already sold out, [check the client’s published collection](https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale=en&ref=github#apparel-collection-scan) in the buyer’s country. RVI Basic can recheck and add selected variants to the stockout worklist. [Download the Shopify Flow file](https://recently-viewed-products.fly.dev/downloads/rvi-stockout-worklist-v1.flow) to record future stockouts. Import it in Shopify Flow and set **Buyer country** before turning it on.
+
 To hand a two-country check to your client, open the [guest wishlist market check](https://recently-viewed-products.fly.dev/shopify-guest-wishlist?locale=en#wishlist-recipient-markets). Enter two exact variant links and the two countries. When both checks finish, copy the review link or open a WhatsApp or email draft. Your client opens the link and checks current prices and orderability.
 
 ### Check a Shopify stockout pair with n8n
