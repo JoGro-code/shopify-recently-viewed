@@ -144,6 +144,10 @@ The sample shows a potential alternative for EU 42 and another size to review fo
 
 If your collection shows sold-out shoe sizes, compare the selected size with and without Shopify's In stock filter. The guide walks through an example in US sizes and builds both comparison links. [Shopify shoe-size filter guide](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter)
 
+[Check the exact variant on a product card](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=en#collection-card-check). Paste the card link with its variant ID and choose the buyer country. If Shopify reports it unavailable, you can take the exact variant into the free same-size replacement check.
+
+[Produktkarte prüfen](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=de#collection-card-check) · [Comprobar variante](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=es#collection-card-check)
+
 ### Build a Shopify Shop by size menu
 
 Use one collection for the menu. In a preview of your own storefront market, enable the size and Availability filters in Shopify Search & Discovery. Select one size and copy its collection URL. Enter the exact option values you want in the menu. The builder keeps your collection and market prefix and adds Shopify’s size and In stock filters to each link.
@@ -244,6 +248,8 @@ Ein zweites Beispiel zeigt mit fiktiven Daten, wie Retouren und aktueller Bestan
 [Chercher un remplacement à partir d’une fiche produit Shopify](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=fr&ref=github&via=approved-demo#footwear-pair). Collez le lien de la fiche d’origine, indiquez le pays de livraison et choisissez la pointure épuisée. Si le formulaire vous le demande, ajoutez l’adresse permanente de votre boutique en `.myshopify.com`. Ouvrez **Comparer plusieurs coloris dans cette pointure**, puis **Chercher dans le catalogue Shopify**. Vérifiez le modèle et le chaussant de la variante disponible dans le pays choisi avant de préparer la paire.
 
 [Vérifier une pointure en rupture de stock dans votre collection](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=fr#shoe-filter-test). Comparez le filtre de pointure seul et le même filtre avec En stock. Ensuite, choisissez **Vérifier une variante de votre boutique** pour contrôler un remplacement dans le même marché.
+
+[Contrôler la variante liée à une carte produit](https://recently-viewed-products.fly.dev/shopify-shoe-size-filter?locale=fr#collection-card-check). Collez le lien de la carte avec son identifiant de variante et choisissez le pays de l’acheteur. Shopify confirme la disponibilité de cette variante dans le marché sélectionné.
 
 [Essayer la démo en français](https://recently-viewed-products.fly.dev/shopify-approved-footwear-demo?locale=fr&ref=github). Dans le catalogue fictif, sélectionnez **EU 42** puis **Chercher une alternative validée** pour ouvrir la variante US 9 approuvée par la boutique. Recommencez avec **EU 43** pour voir le cas où aucune alternative n’a été validée.
 
