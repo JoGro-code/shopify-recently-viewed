@@ -4,9 +4,9 @@ This repository contains a Dawn theme example that remembers up to five recently
 
 ## Check an unavailable clothing variant from the theme editor
 
-After adding this section to a Dawn product template, open the product preview for the exact unavailable variant with its `?variant=` link. For an apparel product with a named size option in a supported buyer market, the section shows **Check a replacement in this size** in Shopify’s theme editor. The link fills the exact variant and buyer country in RVI. Start the catalog check to see which alternatives Shopify confirms are orderable, then review the fit before saving your pair.
+After adding this section to a Dawn product template, open the product preview for the exact unavailable variant with its `?variant=` link. For an apparel product with a named size option in a supported buyer market, the section shows **Check a replacement in this size** in Shopify’s theme editor. The link fills the exact variant and buyer country in RVI. Start the catalog check to see which alternatives Shopify confirms are orderable. Share the review link with the person who checks the fit, or open the Free Shopify listing to install RVI. In RVI Free, paste the review link, check the fit, and approve before publishing your replacement.
 
-**Deutsch.** Die Aktion **Ersatz für diese Größe prüfen** übernimmt im Theme-Editor die ausdrücklich geöffnete, ausverkaufte Bekleidungsvariante und das Käuferland. Starte in RVI die Katalogprüfung und bestätige die Passform für eine bestellbare Alternative.
+**Deutsch.** Die Aktion **Ersatz für diese Größe prüfen** übernimmt im Theme-Editor die ausdrücklich geöffnete, ausverkaufte Bekleidungsvariante und das Käuferland. Starte die Katalogprüfung. Nach einem bestätigten Bestand kannst du den Prüflink teilen oder RVI Free öffnen. Füge den Link nach der Installation in RVI Free ein und bestätige die Passform vor dem Veröffentlichen.
 
 ## Set up one free shoe-size replacement
 
