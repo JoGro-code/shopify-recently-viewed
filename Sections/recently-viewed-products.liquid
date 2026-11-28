@@ -27,6 +27,67 @@
     <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
       {{ section.settings.heading }}
     </h2>
+    {% if request.design_mode and request.page_type == 'product' and product.selected_variant.id and product.selected_variant.available == false %}
+      {% liquid
+        assign rvi_editor_country = localization.country.iso_code
+        assign rvi_editor_markets = 'DE,ES,FR,GB,PL,US' | split: ','
+        assign rvi_editor_category_id = product.category.id
+        assign rvi_editor_taxonomy_prefix = 'gid://shopify/TaxonomyCategory/'
+        assign rvi_editor_prefix_size = rvi_editor_taxonomy_prefix | size
+        assign rvi_editor_category_prefix = rvi_editor_category_id | slice: 0, rvi_editor_prefix_size
+        if rvi_editor_category_prefix == rvi_editor_taxonomy_prefix
+          assign rvi_editor_category_id = rvi_editor_category_id | remove_first: rvi_editor_taxonomy_prefix
+        endif
+        assign rvi_editor_category = rvi_editor_category_id | split: '-' | slice: 0, 2 | join: '-'
+      %}
+      {% if rvi_editor_category == 'aa-1' and rvi_editor_markets contains rvi_editor_country %}
+        {% liquid
+          assign rvi_editor_size_names = 'size,größe,groesse,taille,talla,rozmiar,taglia,tamanho,maat' | split: ','
+          assign rvi_editor_has_size = false
+          for option_name in product.options
+            assign rvi_editor_size_name = option_name | strip | downcase
+            if rvi_editor_size_names contains rvi_editor_size_name
+              assign rvi_editor_has_size = true
+              break
+            endif
+          endfor
+
+          assign rvi_editor_product = canonical_url | split: '?' | first | split: '#' | first
+          assign rvi_editor_scheme = rvi_editor_product | slice: 0, 8
+          assign rvi_editor_host = rvi_editor_product | split: '/' | slice: 2, 1 | first | downcase
+          assign rvi_editor_product_parts = rvi_editor_product | split: '/products/'
+        %}
+        {% if rvi_editor_has_size and rvi_editor_scheme == 'https://' and rvi_editor_host != blank and rvi_editor_product_parts.size == 2 and rvi_editor_product_parts.last == product.handle %}
+          {% unless rvi_editor_host contains 'shopifypreview.com' %}
+            {% liquid
+              assign rvi_editor_source = rvi_editor_product | append: '?variant=' | append: product.selected_variant.id
+              assign rvi_editor_locale = request.locale.iso_code | downcase | split: '-' | first
+              case rvi_editor_locale
+                when 'de'
+                  assign rvi_editor_action = 'Ersatz für diese Größe prüfen'
+                when 'fr'
+                  assign rvi_editor_action = 'Vérifier un remplacement dans cette taille'
+                when 'es'
+                  assign rvi_editor_action = 'Comprobar un reemplazo de esta talla'
+                else
+                  assign rvi_editor_locale = 'en'
+                  assign rvi_editor_action = 'Check a replacement in this size'
+              endcase
+            %}
+            <p>
+              <a
+                class="button button--secondary"
+                href="https://recently-viewed-products.fly.dev/shopify-apparel-size-replacement?locale={{ rvi_editor_locale }}&amp;ref=dawn-editor-variant#apparel-market-form?source={{ rvi_editor_source | url_encode }}&amp;country={{ rvi_editor_country }}"
+                aria-describedby="RviEditorVariant-{{ section.id }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >{{ rvi_editor_action | escape }}</a>
+              <span id="RviEditorVariant-{{ section.id }}">{{ product.selected_variant.title | escape }} · {{ rvi_editor_country | escape }}</span>
+            </p>
+          {% endunless %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
     <ul
       class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
       role="list"

@@ -2,6 +2,12 @@
 
 This repository contains a Dawn theme example that remembers up to five recently viewed products in the visitor's browser and displays them on a product page.
 
+## Check an unavailable clothing variant from the theme editor
+
+After adding this section to a Dawn product template, open the product preview for the exact unavailable variant with its `?variant=` link. For an apparel product with a named size option in a supported buyer market, the section shows **Check a replacement in this size** in Shopify’s theme editor. The link fills the exact variant and buyer country in RVI. Start the catalog check to see which alternatives Shopify confirms are orderable, then review the fit before saving your pair.
+
+**Deutsch.** Die Aktion **Ersatz für diese Größe prüfen** übernimmt im Theme-Editor die ausdrücklich geöffnete, ausverkaufte Bekleidungsvariante und das Käuferland. Starte in RVI die Katalogprüfung und bestätige die Passform für eine bestellbare Alternative.
+
 ## Set up one free shoe-size replacement
 
 **For US shoppers.** [Check a sold-out size in your own Shopify catalog](https://recently-viewed-products.fly.dev/shopify-footwear-fit-check?locale=en&ref=github-flow&via=fit-return#footwear-pair). Choose the exact size, verify an orderable replacement for the United States, and save the pair code before opening the Free installation link.
